@@ -1,0 +1,28 @@
+<view class="feedback-container">
+    <view class="feedback-content">
+        <view class="feedback-title">
+            <view class="font34 bold">{{type==1?'便民信息':'留言反馈'}}内容</view>
+            <view class="font26 a999">500字</view>
+        </view>
+        <view class="textarea-box">
+            <textarea bindblur="bindTextAreaBlur" value="{{values}}" maxlength="500" placeholder="描述您的内容..." placeholder-style="font-size: 26rpx;" bindinput="onInput" />
+        </view>
+    </view>
+    <view class="add-photo">
+
+        <view class="chose-photo-img" wx:if="{{imagePaths}}">
+            <view bindtap="delete" class="delete ab">
+                <image class="ab" mode="aspectFill" src="../../images/delete.png"></image>
+            </view>
+            <image wx:if="{{imagePaths}}" class="img-view" src="{{imagePaths}}"></image>
+        </view>
+        <view class="photo-img" wx:if="{{!imagePaths}}" bindtap="chooseImage">
+            <image src="../../images/camera-icon.png"></image>
+        </view>
+        <view class="font26 a666" wx:if="{{!imagePaths}}">可添加图片</view>
+    </view>
+    <view class="submit-btn font30" bindtap="onBind">
+        <view class="tips font26">感谢您对商城的支持！</view>
+        确认提交
+    </view>
+</view>

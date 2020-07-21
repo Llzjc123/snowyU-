@@ -1,0 +1,37 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/message/message",
+        "pages/car/car",
+        "pages/my/my",
+        "pages/indexSecond/index",二级页面
+        "pages/productDetail/index",产品详情
+        "pages/myStore/index",分销中心
+        "pages/myAddress/index",地址列表
+        "pages/myAddAddress/index",地址添加
+        "pages/myCoupon/index",优惠券
+        "pages/myCollect/index",收藏
+        "pages/orderConfirm/index",订单提交
+        "pages/orderList/index",我的订单列表
+        "pages/sign/index",签到页面
+        "pages/searchPage/index",搜索页面
+        "pages/login/index",登录授权
+        "pages/orderComment/index",订单评价
+        "pages/orderDetail/index",订单详情
+        "pages/activityDetail/index",活动详情
+        "pages/newProductDetail/index",上新详情
+        "pages/myStore/storeList/index",我的收益订单
+        "pages/myStore/orderDetail/index",我的收益订单详情
+        "pages/myStore/moneyList/index",我的收益列表
+        "pages/myStore/myTeam/index",我的团队
+        "pages/myStore/cashOut/index",申请提现
+        "pages/myStore/cashOutList/index",提现列表
+        "pages/myStore/cashOutDetail/index",提现详情
+        "pages/promotionCard/index",二维码
+        "pages/orderRefund/index",退款申请
+        "pages/orderRefundList/index",退款售后列表
+        "pages/orderRefundDetail/index",退款状态详情
+        "pages/orderLogistics/index"物流信息
+    ],
+    
+}

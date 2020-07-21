@@ -1,0 +1,10 @@
+<view class="my-collection-container">
+    <view class="collection-wrapper">
+        <view class="collection-product-list">
+            <block wx:for="{{collectionList}}" wx:key>
+                <v-collection-list type="collection" class="collection-item" data="{{item}}"></v-collection-list>
+            </block>
+        </view>
+    </view>
+</view> 
+<view wx:if="{{!collectionList.length}}" class="no-more-data">暂无收藏记录</view>

@@ -1,0 +1,14 @@
+<view class="discount-record-container">
+    <view class="record-list">
+        <block wx:for="{{moneyList}}" wx:key>
+            <view class="record-item">
+                <view class="record-left">
+                    <view class="font26 bold {{status === 1 ? 'blueWord' : ''}}">{{item.status}}</view>
+                    <view class="date font22">{{item.add_time}}</view>
+                </view>
+                <view class="record-right font36 bold">
+                    <text class="font28">+</text>{{item.extract_price}}</view>
+            </view>
+        </block>
+    </view>
+</view>

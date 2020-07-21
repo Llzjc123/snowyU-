@@ -1,0 +1,96 @@
+<view class="coupon-container">
+    <view class="coupon-top">
+        <view wx:for="{{navList}}" wx:key class="coupon-item {{ activeItem === index ? 'activeFont' : ''}}" bindtap="change" data-index="{{index}}">
+            {{ item }}
+            <view class="active-line" wx:if="{{ activeItem === index }}"></view>
+        </view>
+    </view>
+    <scroll-view scroll-y style='height:{{scrollPxHeight}}px;' wx:if="{{activeItem === 0}}">
+        <view class="coupon-content">
+            <block wx:for="{{noUseCouponList}}" wx:key>
+                <view class="coupon-list">
+                    <view class="store-box">
+                        <view class="store-left">
+                            <view class="store-img">
+                                <image src="{{item.store.store_imgUrl}}"></image>
+                            </view>
+                            <view style="margin-left: 22rpx;">
+                                <view class="font28" style="line-height:50rpx;">{{item.store.shop_name}}</view>
+                                <view class="font22 a666" style="line-height:40rpx;">{{item.store.store_report}}</view>
+                            </view>
+                        </view>
+                        <view bindtap="toStore" data-id="{{item.store.mer_id}}" hover-class="none" class="enter-btn font24">进店</view>
+                    </view>
+                    <block wx:for="{{item.coupon}}" wx:key>
+                        <view class="coupon-box" bindtap='toStore' data-id="{{item.mer_id}}">
+                            <image src="../../images/coupon-bg.png"></image>
+                            <view class="coupon-position">
+                                <view class="coupon-left">
+                                    <!-- <view class="coupon-img">
+                                    <image src="../../images/coupon-img.png"></image>
+                                </view> -->
+                                    <view style="margin-left:28rpx;">
+                                        <view class="color4a">
+                                            <text class="font20">￥</text>
+                                            <text class="font36">{{item.coupon_price}}</text>
+                                            <text class="font24" style="margin-left:10rpx;">{{item.coupon_title}}</text>
+                                        </view>
+                                        <view class="color4d font24">店铺优惠券</view>
+                                        <view class="color4d font20">使用日期：{{item.add_time}}-{{item.end_time}}</view>
+                                    </view>
+                                </view>
+                                <view class="use-img">
+                                    <image src="../../images/use-coupon.png"></image>
+                                </view>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+    <scroll-view scroll-y style='height:{{scrollPxHeight}}px;' wx:if="{{activeItem === 1}}" class="coupon-wrapper">
+        <block wx:for="{{hasUseCouponList}}" wx:key>
+            <block wx:for="{{item.coupon}}" wx:key>
+                <view class="coupon-list">
+                    <image src="../../images/used-coupon-bg.png" class="bg-size"></image>
+                    <view class="coupon-cpntent">
+                        <view class="right">
+                            <view class="font34 bold ">
+                                <text class="font20">￥</text>
+                                <text class="din-normal font36">{{item.coupon_price}}</text>
+                                <!-- <text class="font24" style="margin-left:8rpx;">{{item.coupon_title}}</text> -->
+                            </view>
+                            <view class="font24">{{item.coupon_title}}</view>
+                            <view class="font20">使用日期: {{item.add_time}}-{{item.end_time}}</view>
+                        </view>
+                    </view>
+
+
+                </view>
+            </block>
+        </block>
+        <view class="no-more-data" wx:if="{{myCouponList.length==0}}">暂无优惠券</view>
+    </scroll-view>
+    <scroll-view scroll-y style='height:{{scrollPxHeight}}px;' wx:if="{{activeItem === 2}}" class="coupon-wrapper">
+        <block wx:for="{{timeCouponList}}" wx:key>
+            <block wx:for="{{item.coupon}}" wx:key>
+                <view class="coupon-list">
+                    <image src="../../images/invalid-coupon-bg.png" class="bg-size"></image>
+                    <view class="coupon-cpntent a666">
+                        <view class="right">
+                            <view class="font34 bold ">
+                                <text class="font20">￥</text>
+                                <text class="din-normal font36">{{item.coupon_price}}</text>
+                                <!-- <text class="font24" style="margin-left:8rpx;">满25减5</text> -->
+                            </view>
+                            <view class="font24">{{item.coupon_title}}</view>
+                            <view class="font20">使用日期: {{item.add_time}}-{{item.end_time}}</view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </block>
+        <view class="no-more-data" wx:if="{{myCouponList.length==0}}">暂无优惠券</view>
+    </scroll-view>
+</view>

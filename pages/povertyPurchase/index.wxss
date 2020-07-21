@@ -1,0 +1,14 @@
+.poverty-purchase-container {
+  width: 100%;
+  background: #fefefe;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.poverty-purchase-container .purchase-item {
+  width: 690rpx;
+  background: #fff;
+  box-shadow: 0rpx 2rpx 10rpx #eee;
+  margin: 18rpx 0;
+  border-radius: 8rpx;
+}

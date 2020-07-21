@@ -1,0 +1,33 @@
+<view class="shop-container" wx:if="{{loading}}">
+    <view class="occupancy-bg">
+        <view class="bg-color"></view>
+        <view class="bg-fff"></view>
+        <view class="shop-banner">
+            <image src="{{storeInfo.recode_imgUrl}}"></image>
+        </view>
+    </view>
+    <!-- <scroll-view scroll-y style="height:{{scrollPxHeight}}px">
+
+    </scroll-view> -->
+    <view class="shop-head">
+        <view class="head-left">
+            <view class="left-img">
+                <image src="{{storeInfo.store_imgUrl}}" style="width:90rpx;height:90rpx;"></image>
+            </view>
+            <view>
+                <view class="left-title font26 bold">{{storeInfo.shop_name}}</view>
+                <view class="font20 a666">{{storeInfo.store_name}}</view>
+            </view>
+        </view>
+        <view class="head-right" bindtap="callphone">
+            <image src="../images/phone-icon.png" style="width:50rpx;height:51rpx;"></image>
+        </view>
+    </view>
+    <view class="like-wrapper">
+        <view class="like-product-list">
+            <block wx:for="{{productList}}" wx:key>
+                <v-product-list type="like" class="like-item" data="{{item}}"></v-product-list>
+            </block>
+        </view>
+    </view>
+</view>

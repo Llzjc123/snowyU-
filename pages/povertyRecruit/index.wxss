@@ -1,0 +1,14 @@
+.poverty-recruit-container {
+  width: 100%;
+  background: #fefefe;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.poverty-recruit-container .recruit-item {
+  width: 690rpx;
+  background: #fff;
+  box-shadow: 0rpx 2rpx 10rpx #eee;
+  margin: 18rpx 0;
+  border-radius: 8rpx;
+}

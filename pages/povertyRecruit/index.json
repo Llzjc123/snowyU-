@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "扶贫招聘",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "v-recruit": "/components/povertyRecruit/index"
+    }
+}

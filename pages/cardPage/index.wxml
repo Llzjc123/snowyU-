@@ -1,0 +1,41 @@
+<view class="input-wrapper">
+    <text class="font34">请输入兑换卡号</text>
+    <input bindinput="inputChange" class="input-view"></input>
+    <view class="btn-view" bindtap="getData">查询</view>
+</view>
+<view class="result-wrapper" wx:if="{{product.length}}">
+    <view class="title-view">
+        <view style="margin-right:20rpx;">卡类型：{{thk.type}}</view>
+        <view>金额：{{thk.mz}}元</view>
+    </view>
+    <view class="goods-view">
+        <view class="goods-list" wx:for="{{product}}" wx:key>
+            <image class="goods-image" src="{{item.image}}"></image>
+            <view class="good-view">
+                <view class="good-name twotext">{{item.store_name}}</view>
+                <view style="width:100%;display:flex;justify-content: space-between;">
+                    <view class="good-info">{{item.store_info}}</view>
+                    <view style="color:#333333;font-size:28rpx;">{{item.number}}{{item.unit_name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <form bindsubmit="formSubmit">
+        <view class='information'>
+            <view class='information-li flex'>
+                <label>收货人</label>
+                <input type='text' placeholder='请输入姓名' placeholder-class='placeholder' name="contacts" />
+            </view>
+            <view class='information-li flex'>
+                <label>联系电话</label>
+                <input type='number' maxlength="11" placeholder-class='placeholder' placeholder='请输入联系电话' name="phone"></input>
+            </view>
+            <view class='information-li flex'>
+                <label>收货地址</label>
+                <input type='text' placeholder-class='placeholder' placeholder='请填写具体地址' name="address"></input>
+            </view>
+        </view>
+
+        <button class="dui-btn" formType="submit">确认兑换</button>
+    </form>
+</view>

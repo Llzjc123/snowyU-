@@ -1,0 +1,25 @@
+<view class="message-new">
+    <view class="firsttext new-title">雪天盐为中国国际食品餐饮博览会提味</view>
+    <view class="firsttext new-desc">2018年食品餐饮博览会暨专场推介会顺利举行</view>
+    <view class="product-list">
+        <view class="product-img">
+            <image src="../images/product02.png"></image>
+        </view>
+        <view class="product-img">
+            <image src="../images/product02.png"></image>
+        </view>
+        <view class="product-img">
+            <image src="../images/product02.png"></image>
+        </view>
+        <view class="product-img">
+            <image src="../images/product02.png"></image>
+        </view>
+        <view class="product-img">
+            <image src="../images/product02.png"></image>
+        </view>
+    </view>
+    <view class="data-view">
+        <image src="../images/act-eye.png"></image>
+        <text>35.86w人看过 </text>
+    </view>
+</view>

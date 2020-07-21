@@ -1,0 +1,29 @@
+<navigator hover-class='none' url="/pages/productDetail/index?productId={{data.list_id}}">
+    <!-- <view class="product-list {{type=='like'?'like-product-list':''}}"> -->
+    <view class="product-list like-product-list}}">
+        <view class="product-img">
+            <image  mode="aspectFill" src="{{data.img_url?data.img_url:data.image}}"></image>
+        </view>
+        <view class="title-display">
+            <view class="text font28 a000 bold firsttext">{{data.store_name}}</view>
+            <view class="text a666 font24 firsttext line40 overflowHide">{{data.store_info}}</view>
+        </view>
+        <view class="text marginTop48">
+            <view wx:if="{{ type === 'like' }}">
+                <text class="font20 aff2">￥</text>
+                <text class="din-bold font50 aff2">{{data.price}}</text>
+            </view>
+            <view wx:else>
+                <view wx:if="{{!data.invalid}}">
+                    <text class="font20 aff2">￥</text>
+                    <text class="din-bold font50 aff2">{{data.price}}</text>
+                </view>
+                <view wx:else class="Invalid font22 afff">失效</view>
+            </view>
+            <image wx:if="{{ type === 'like' }}" src="../images/list-car-ico.png" class="car-ico"></image>
+            <!-- <image wx:if="{{ type === 'collection' }}" src="../images/product-delete-ico.png" class="car-ico delete-ico"></image> -->
+
+        </view>
+
+    </view>
+</navigator>

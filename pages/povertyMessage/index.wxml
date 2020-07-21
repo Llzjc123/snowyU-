@@ -1,0 +1,28 @@
+<view class="poverty-purchase-container">
+    <view class="poverty-purchase-inner">
+        <block wx:for="{{purchaseList}}" wx:key wx:if="{{purchaseList.length > 0}}">
+            <navigator hover-class="none" url="/pages/povertyActivity/index?id={{item.id}}&type=bm" class="purchase-item">
+                <view class="user-view">
+                    <image class="user-img" src="{{item.headimgurl}}"></image>
+                    <view class="name">{{item.nickname}}</view>
+                    <button class="btn-item" open-type='share' plain='true'>
+
+                        <image class="share-img" src="../images/list-share.png"></image>
+                    </button>
+                </view>
+                <view class="title-view">
+                    <view class="title">{{item.title}}</view>
+                    <view class="data">{{item.sj}}</view>
+                </view>
+                <view class="content">
+                    {{item.content}}
+                </view>
+                <view class="content-img" wx:if="{{item.img_url}}">
+                    <image src="{{item.img_url}}" mode="widthFix"></image>
+                </view>
+            </navigator>
+        </block>
+        <view wx:if="{{purchaseList.length==0}}" class="no-more-data">暂无便民信息</view>
+    </view>
+    <navigator class="to-btn" url="/pages/my/myFeedback/index?type=1">发布便民信息</navigator>
+</view>

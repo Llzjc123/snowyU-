@@ -1,0 +1,32 @@
+<view class="userinfo-container">
+    <view class="user-portrait">
+        <view>
+            <image src="{{userInfo.headimgurl}}" style="border-radius:50%;width:190rpx;height:190rpx;"></image>
+        </view>
+    </view>
+    <view class="user-info">
+        <view class='user-item nickname-li'>
+            <label style="margin-right: 88rpx;" class="label font30">我的昵称</label>
+            <input type='text' disabled placeholder-class='placeholder' name="name" value='{{userInfo.nickname}}' class="input-color font28" />
+        </view>
+        <view class='user-item nickname-li'>
+            <label style="margin-right: 88rpx;" class="label font30">账号标识</label>
+            <view wx:if="{{cate_name}}" class="picker input-color font28">{{cate_name}}</view>
+            <picker wx:else bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="cate_name">
+                <view class="picker input-color font28">
+                    {{array[index].cate_name}}
+                </view>
+            </picker>
+            <image src="../../images/arrow-right2.png" style="width:14rpx;height:20rpx;"></image>
+        </view>
+        <view class='user-item nickname-li'>
+            <label style="margin-right: 88rpx;" class="label font30">我的姓名</label>
+            <input bindinput="inputChange" type='text' placeholder='请输入姓名' name="name" value='{{name}}' class="input-color font28" />
+        </view>
+    </view>
+    <view class="submit-btn font30" bindtap="submit">
+        提交保存
+    </view>
+    <button open-type="contact" class='customer-modify font30'>联系客服申请修改</button>
+
+</view>

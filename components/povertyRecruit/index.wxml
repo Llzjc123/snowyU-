@@ -1,0 +1,28 @@
+<view class="recruit-wrapper">
+    <view class="recruit-top">
+        <view class="top-left">
+            <view class="img-box">
+                <image src="{{data.image_input}}"></image>
+            </view>
+            <view class="name" style="width: 286rpx;">{{data.author}}</view>
+        </view>
+        <view class="top-right">{{data.add_time}}</view>
+    </view>
+    <view class="recruit-center">
+        <view class="center-title">{{data.title}}</view>
+        <view class="center-describe">
+            {{data.synopsis}}
+        </view>
+    </view>
+    <view class="recruit-bottom">
+        <view class="address">
+            <image src="../images/address1-icon.png" style="width:20rpx;height:24rpx;position:relative;top:4rpx;"></image>
+            {{data.dz}}
+        </view>
+        <view class="tel">
+            <image src="../images/tel-icon.png" style="width:20rpx;height:24rpx;position:relative;top:4rpx;"></image>
+            {{data.sj}}
+        </view>
+        <!-- <view class="tips">* 温馨提示： {{data.author}}</view> -->
+    </view>
+</view>

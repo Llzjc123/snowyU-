@@ -1,0 +1,36 @@
+<view class="category-container">
+    <scroll-view scroll-x class="category-scroll-wrapper" style="width:100%;height:100%">
+        <view class="category hight">
+            <view class="box" style='font-weight:normal'>最后疯抢</view>
+            <view class="text">已开抢</view>
+        </view>
+        <view class="category hight">
+            <view class="box">10:00</view>
+            <view class="text">抢购中</view>
+        </view>
+        <view class="category">
+            <view class="box">12:00</view>
+            <view class="text">即将开抢</view>
+        </view>
+        <view class="category">
+            <view class="box">14:00</view>
+            <view class="text">即将开抢</view>
+        </view>
+        <view class="category">
+            <view class="box">16:00</view>
+            <view class="text">即将开抢</view>
+        </view>
+        <view class="category">
+            <view class="box">18:00</view>
+            <view class="text">即将开抢</view>
+        </view>
+        <view class="category">
+            <view class="box">20:00</view>
+            <view class="text">即将开抢</view>
+        </view>
+        <view class="category">
+            <view class="box">22:00</view>
+            <view class="text">即将开抢</view>
+        </view>
+    </scroll-view>
+</view>

@@ -1,0 +1,8 @@
+<view class="classify-container">
+    <scroll-view scroll-x style='width:auto;overflow:hidden;' class="scroll-height">
+        <view wx:for="{{data}}" wx:key class="item {{ activeItem === index ? 'activeFont' : ''}}">
+            {{ item }}
+            <view class="active-line" wx:if="{{ activeItem === index }}"></view>
+        </view>
+    </scroll-view>
+</view>

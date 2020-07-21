@@ -1,0 +1,72 @@
+@import "../common.wxss";
+
+.navigator-wrapper {
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.dask {
+    position: absolute;
+    top: 0;
+    left: 4%;
+    width: 92%;
+    height: 100%;
+    background: #ff2f3e;
+    opacity: 0.1;
+    display: none;
+    border-radius: 10rpx;
+}
+
+.hover-class .dask {
+    /* background: transparent; */
+    display: block;
+}
+
+.product01-wrapper {
+    width: 175rpx;
+    padding-top: 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product01-wrapper>view{
+    flex:1;
+    width:90%;
+    text-align: center;
+}
+.product-detail {
+    width: 140rpx;
+    height: 130rpx;
+    position: relative;
+    margin-bottom: 10rpx;
+}
+
+.product-detail .product-img {
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 6rpx;
+}
+
+.product-detail .hot-ico {
+    width: 36rpx;
+    height: 36rpx;
+    position: absolute;
+    top: 0;
+    right: 8rpx;
+}
+
+.product01-wrapper .collage-view {
+    width:80rpx;
+    margin-top: 8rpx;
+    height: 26rpx;
+    padding: 0 12rpx;
+    line-height: 26rpx;
+    color: #fff;
+    font-size: 18rpx;
+    background: #ff2f3e;
+    border-radius: 20rpx;
+}
+
+.line-height16 {
+    line-height: 1.6;
+}

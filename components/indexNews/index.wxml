@@ -1,0 +1,27 @@
+<view class="index-news" bindtap='toMessage'>
+    <navigator url="/pages/povertyDynamics/index?cid=7" hover-class="none" class="left">
+        <image src="../images/headlines.png"></image>
+    </navigator>
+    <view style="flex:1;height:106rpx;">
+        <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}}" circular="{{true}}" class="news-swiper">
+            <block wx:for="{{newsList}}" wx:key>
+                <swiper-item style="height:106rpx;">
+                    <view class="right">
+                        <navigator hover-class="none" url="/pages/povertyActivity/index?id={{item[0].list_id}}">
+                            <view style="display:flex;margin-top:16rpx;">
+                                <span class="news-icon">头条</span>
+                                <span class="news-word">{{item[0].title}}</span>
+                            </view>
+                        </navigator>
+                        <navigator hover-class="none" url="/pages/povertyActivity/index?id={{item[1].list_id}}">
+                            <view style="display:flex;margin-top:10rpx;">
+                                <span class="news-icon">原创</span>
+                                <span class="news-word">{{item[1].title}}</span>
+                            </view>
+                        </navigator>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</view>

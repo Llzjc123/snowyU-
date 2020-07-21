@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "滞销求购",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "v-purchase": "/components/povertyRecruit/index"
+    }
+}

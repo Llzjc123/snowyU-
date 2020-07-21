@@ -1,0 +1,15 @@
+<view class='promotion-card'>
+    <view class='title flex'>
+        <view class='line'></view>
+        <view class='name'>西农优选</view>
+        <view class='line'></view>
+    </view>
+    <view class='white-bg'>
+        <image src='{{userinfo.headimgurl}}' class='pic'></image>
+        <view class='white-name'>{{userinfo.nickname}}</view>
+        <view class='ewm'>
+            <image src='{{code_img}}' data-src="{{code_img}}" bindlongtap='saveImg'></image>
+        </view>
+        <view class='tip'>长按二维码保存到相册，微信扫描关注小程序</view>
+    </view>
+</view>

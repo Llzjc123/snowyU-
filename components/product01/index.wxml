@@ -1,0 +1,58 @@
+<block wx:if="{{type==1}}">
+    <navigator class="navigator-wrapper" hover-class='hover-class' url="/pages/productDetail/index?productId={{data.list_id}}">
+        <view class="product01-wrapper">
+            <view class="product-detail">
+                <image class="product-img" src="{{data.img_url}}" />
+                <image wx:if="{{isHot}}" class="hot-ico" src="../images/product-hot.png"></image>
+                <image wx:if="{{isNew}}" class="hot-ico" src="../images/product-new.png"></image>
+            </view>
+            <block wx:if="{{type!=3}}">
+                <view class="font24 a46 firsttext line-height16 ">{{data.store_name}}</view>
+                <view class="font20 a89 firsttext line-height16" wx:if="{{type!=4}}">{{data.store_info}}</view>
+                <view class="aff2 font22 line-height16">
+                    <text>￥</text>
+                    <text class="din-bold aff2 font36">{{data.price}}</text>
+                </view>
+                <view wx:if="{{type==4}}" class="font20 a8b8b8b decoration">￥{{data.ot_price}}</view>
+            </block>
+            <block wx:else>
+                <view class="collage-view">2人拼</view>
+                <view class="aff2 font22 line-height16">
+                    <text>￥</text>
+                    <text class="din-bold aff2 font36">29.9</text>
+                </view>
+                <view class="a8b font20">已有12.0万人拼</view>
+            </block>
+        </view>
+        <view class="dask"></view>
+    </navigator>
+</block>
+<block wx:else>
+    <navigator class="navigator-wrapper" hover-class='hover-class' url="/pages/productDetail/index?productId=14">
+        <view class="product01-wrapper">
+            <view class="product-detail">
+                <image class="product-img" src="../images/{{type==2?'product04':'product01'}}.png" />
+                <image wx:if="{{isHot}}" class="hot-ico" src="../images/product-hot.png"></image>
+                <image wx:if="{{isNew}}" class="hot-ico" src="../images/product-new.png"></image>
+            </view>
+            <block wx:if="{{type!=3}}">
+                <view class="font24 a46 line-height16 ">{{type==2?'5L植物油':'青海湖盐'}}</view>
+                <view class="font20 a89 line-height16" wx:if="{{type!=4}}">{{type==2?'6桶/箱':'320克'}}</view>
+                <view class="aff2 font22 line-height16">
+                    <text>￥</text>
+                    <text class="din-bold aff2 font36">{{type==2?'99':'35'}}</text>
+                </view>
+                <view wx:if="{{type==4}}" class="font20 a8b8b8b decoration">￥40</view>
+            </block>
+            <block wx:else>
+                <view class="collage-view">2人拼</view>
+                <view class="aff2 font22 line-height16">
+                    <text>￥</text>
+                    <text class="din-bold aff2 font36">29.9</text>
+                </view>
+                <view class="a8b font20">已有12.0万人拼</view>
+            </block>
+        </view>
+        <view class="dask"></view>
+    </navigator>
+</block>

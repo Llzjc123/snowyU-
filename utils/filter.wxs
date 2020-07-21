@@ -1,0 +1,35 @@
+var format = function(text) {
+    var reg = getRegExp("\\\\n", 'g');
+    return text ? text.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;') : text;
+}
+
+var formatReplace = function(text) {
+    //HTML 支持的希腊字母
+    var reg = getRegExp("&middot;", 'g');
+    return text ? text.replace(reg, '·') : text;
+}
+
+var formatIndexUrl = function(url, name) {
+    var reg = url.indexOf('pid');
+    return reg == -1 ? url : url + '&name=' + name;
+}
+
+
+var formJson = function(data) {
+    return JSON.parse(data)
+}
+var createDate = function(data) {
+    console.log(data)
+}
+
+var img_base_url_pages = function() {
+    return '';
+}
+
+module.exports = {
+    formJson: formJson,
+    formatIndexUrl: formatIndexUrl,
+    format: format,
+    createDate: createDate,
+    img_base_url_pages: img_base_url_pages,
+}

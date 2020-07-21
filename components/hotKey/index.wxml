@@ -1,0 +1,6 @@
+<view class="hot-key-container">
+    <view class="hot-title">热搜</view>
+    <block wx:for="{{hotKey}}" wx:key>
+        <view data-word="{{item.name}}" bindtap='goSearch' class="hot-item">{{item.name}}</view>
+    </block>
+</view>

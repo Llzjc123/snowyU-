@@ -1,0 +1,11 @@
+<block wx:if="{{list.length}}">
+    <navigator url="/pages/myDuiHuanDetail/index?id={{item.id}}" class="list-view" wx:for="{{list}}" wx:key>
+        <view>
+            <view style="line-height:50rpx;">兑换提货卡卡号：{{item.kh}}</view>
+            <view style="line-height:50rpx;">兑换提货卡类型：{{item.type}}</view>
+            <view style="line-height:50rpx;">兑换提货卡面值：{{item.mz}}</view>
+        </view>
+        <view style="font-size:30rpx;color:#999;">详情 ></view>
+    </navigator>
+</block>
+<view wx:if="{{!list.length}}" class="no-more-data">暂无兑换记录</view>

@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8614a;
+    height: 100%;
+}
+
+.logo {
+    margin: 150rpx 0;
+}
+
+.logo image {
+    width: 424rpx;
+    height: 50rpx;
+}
+
+.icon {
+    margin-bottom: 150rpx;
+}
+
+.icon image {
+    width: 595rpx;
+    height: 329rpx;
+}
+
+.login-btn button {
+    background: #f8614a;
+    color: #fff;
+    border: 1rpx solid #fff;
+    font-size: 34rpx;
+    padding-left: 140rpx;
+    padding-right: 140rpx;
+}
+
+.tips-text {
+    font-size: 24rpx;
+    color: #fff;
+    margin-top: 30rpx;
+}

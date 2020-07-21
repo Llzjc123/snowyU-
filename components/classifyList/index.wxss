@@ -1,0 +1,36 @@
+.classify-container {
+    width: 100%;
+    height: 80rpx;
+    background: #f8614a;
+}
+
+.scroll-height {
+  height: 80rpx;
+  line-height: 50rpx;
+  white-space: nowrap;
+}
+
+.item {
+  padding: 0 24rpx;
+  font-size: 26rpx;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+}
+
+.activeFont {
+  font-size: 30rpx;
+  line-height: 70rpx;
+}
+
+.active-line {
+  display: inline-block;
+  width: 20rpx;
+  height: 4rpx;
+  border-radius: 2rpx;
+  background: #fff;
+  position: absolute;
+  bottom: 4rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,63 @@
+<import src="/wxParse/wxParse.wxml" />
+<view class="recruit-detail-container">
+    <view class="detail-top">
+        <view class="top-title">
+            <view class="position">{{newsInfo.title}}</view>
+            <view class="date">{{newsInfo.add_time}}</view>
+        </view>
+        <!-- <view class="salary">5-6千/月</view>
+        <view class="basic-require">
+            <view>
+                <image src="../images/number-icon.png" class="icon" style="width:19rpx;height:24rpx;"></image>
+                <text>招1人</text>
+            </view>
+            <view>
+                <image src="../images/education-icon.png" class="icon" style="width:28rpx;height:24rpx;"></image>
+                <text>高中</text>
+            </view>
+            <view>
+                <image src="../images/date-icon.png" class="icon" style="width:24rpx;height:23rpx;"></image>
+                <text>3年</text>
+            </view>
+        </view> -->
+    </view>
+    <view class="enterprise-info">
+
+        <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+
+        <!-- <view class="info-top">
+            <view class="top-enterprise">
+                <view>
+                    <image src="../images/enterprise-img.png" style="width:110rpx;height:110rpx;display:block;"></image>
+                </view>
+                <view class="mar-left22">
+                    <view class="font30 bold">公司信息</view>
+                    <view class="font30 bold">上海燕谷坊电子商务有限公司</view>
+                </view>
+            </view>
+            <view class="company-type font22">民营公司｜50-150人｜快速消费品</view>
+        </view>
+        <view class="info-describe font22">上海燕谷坊电子商务有限公司诞生于上海燕谷坊电子商务有限公司诞生于上海燕谷坊电子商务有限公司诞生于上海燕谷坊电子商务有限公司诞生上海燕谷坊电子商务有限公司诞生于上海燕谷坊电子商务有限公司诞生于上海燕谷坊电子商务有限公司诞生于上海燕谷坊电子商务有限公司诞生上海燕谷坊电子商务有限公司诞生于上海燕谷坊电子商务有限公司诞生于上海燕谷坊电子商务有限公司诞生于上海燕谷坊电子商务有限公司诞生。</view>
+        <view class="contact-info font24 bold">
+            <view>地址： 上海燕谷坊电子商务有限公司</view>
+            <view>电话： 021-86595432</view>
+        </view>
+    </view>
+    <view class="job-describe">
+        <view class="position-des font30 bold">职位描述</view>
+        <view class="responsibility font22">岗位职责：</view>
+        <view class="specific font22">
+        1.海燕谷坊电子商务有限公司诞生于上海燕谷坊电子商务有限公司诞生于。
+        </view>
+        <view class="specific font22">
+        2.海燕谷坊电子商务有限公司诞生于上海燕谷坊电子商务有限公司诞生于。
+        </view>
+        <view class="specific font22">
+        3.海燕谷坊电子商务有限公司诞生于上海燕谷坊电子商务有限公司诞生于。
+        </view>
+    </view>
+    <view class="reminder">
+        <view class="reminder-title font30 bold">温馨提示：</view>
+        <view class="specific-reminder font22">海燕谷坊电子商务有限公司诞生于上海燕谷坊电子商务有限公司诞生于。</view>-->
+    </view>
+</view>

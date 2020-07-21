@@ -1,0 +1,18 @@
+<view class="town-container">
+    <view class="aside-town">
+        <scroll-view class="scroll-wrapper" scroll-y style="height:{{scrollPxHeight}}px;overflow:hidden;">
+            <view wx:for="{{category}}" wx:key class="town-list {{ activeId == item.id ? 'active-item' : ''}}" bindtap="selectTownFunc" data-index="{{item.id}}">
+                {{item.cate_name}}
+            </view>
+        </scroll-view>
+    </view>
+    <scroll-view class="town-scroll" scroll-y style="height:{{scrollPxHeight}}px;overflow:hidden;">
+        <view class="town-display">
+            <view class="block-town">
+                <block wx:for="{{ data }}" wx:key>
+                    <v-shop type="small" data="{{ item }}"></v-shop>
+                </block>
+            </view>
+        </view>
+    </scroll-view>
+</view>

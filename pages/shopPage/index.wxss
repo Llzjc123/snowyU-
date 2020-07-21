@@ -1,0 +1,87 @@
+.shop-container {
+    width: 100%;
+    min-height: 100%;
+    background: #eee;
+    /* padding-top:20rpx; */
+}
+
+.shop-container .occupancy-bg {
+    position: relative;
+}
+
+.shop-container .bg-color {
+    background: #f8614a;
+    height: 90rpx;
+    width: 100%;
+}
+
+.shop-container .bg-fff {
+    width: 100%;
+    height: 210rpx;
+}
+
+.shop-banner {
+    width: 710rpx;
+    height: 300rpx;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.shop-banner image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+
+.shop-container .shop-head {
+    width: 710rpx;
+    margin: 0 auto;
+    height: 120rpx;
+    border-radius: 8rpx;
+    margin-top: 20rpx;
+    padding: 15rpx 28rpx 0 18rpx;
+    box-sizing: border-box;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop-head .head-left {
+    display: flex;
+}
+
+.shop-head .left-title {
+    line-height: 54rpx;
+}
+
+.shop-head .left-img {
+    margin-right: 20rpx;
+}
+
+.shop-head .head-right {
+    position: relative;
+    top: 16rpx;
+}
+
+.like-wrapper {
+    margin-top: 16rpx;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.like-wrapper .like-product-list {
+    width: 710rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.like-wrapper .like-product-list .like-item {
+    height: 562rpx;
+}
+
+.like-wrapper .like-product-list .like-item:nth-child(2n-1) {
+    margin-right: 17rpx;
+}

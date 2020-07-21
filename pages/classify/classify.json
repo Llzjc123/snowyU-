@@ -1,0 +1,11 @@
+{
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "分类",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "v-loading": "/components/loading/index",
+        "v-all-product": "/components/classifyAllProduct/index",
+        "v-town": "/components/classifyTown/index",
+        "v-enterprise": "/components/classifyEnterprise/index"
+    }
+}

@@ -1,0 +1,30 @@
+<view class='address_ul'>
+    <view wx:if="{{addressArray.length>0}}" class='address_li' wx:for="{{addressArray}}" wx:key>
+        <view class='addressx' data-item="{{item}}" bindtap='goOrder'>
+            <view class='addressName'>收货人：{{item.real_name}}
+                <text class='addressphone'>{{item.phone}}</text>
+            </view>
+            <view class='addressLock'>收货地址：{{item.province}}{{item.city}}{{item.district}}{{item.detail}}</view>
+        </view>
+        <view class='addressc flex'>
+            <view data-idx='{{item.list_id}}' class='Maddress' bindtap='activetap'>
+                <label class="checkbox">
+                    <checkbox value="{{index}}" checked="{{item.is_default}}" />
+                </label>
+                <text>设为默认地址</text>
+                <!-- <text class='iconfont icon-duihao1 Choice {{_num==1?"active":""}}' data-idx='{{1}}'></text> 设为默认地址 -->
+            </view>
+
+            <view>
+                <text class='edit' data-data="{{item}}" bindtap='editAddress'>编辑</text>
+                <text class='del' data-id="{{item.list_id}}" bindtap='delAddress'>删除</text>
+            </view>
+        </view>
+    </view>
+    <view class="no-more-data" wx:if="{{addressArray.length==0}}">暂无地址</view>
+</view>
+<view style='height:80rpx'></view>
+<view class='footer'>
+    <view class='system-address' bindtap='addAddress'>新增地址</view>
+    <!-- <view class='weixin-address' bindtap='getWxAddress'>微信地址</view> -->
+</view>

@@ -1,0 +1,37 @@
+@import "../common.wxss";
+
+.allproduct-list {
+  width: 289rpx;
+  height: 422rpx;
+  border-radius: 8rpx;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+}
+
+.allproduct-list .allproduct-img {
+    width: 289rpx;
+    height: 289rpx;
+}
+
+.allproduct-list image {
+  width: 100%;
+  height: 100%;
+}
+
+.allproduct-list .name, .allproduct-list .price {
+  padding: 0 17rpx;
+  line-height: 52rpx;
+}
+
+.allproduct-list .price {
+  line-height: 62rpx;
+}
+
+.allproduct-list .cart-ico {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  bottom: 30rpx;
+  right: 16rpx;
+}

@@ -1,0 +1,22 @@
+<view class="product-nav-container">
+    <navigator hover-class="none" class="title" url='/pages/indexSecond/index?type={{type}}'>
+        <view class="font32 bold">
+            {{type==1?'新品抢鲜':type==2?'餐饮直供':type==3?'特惠团购':'限时秒杀'}}
+        </view>
+        <view class="font18 margintop10" wx:if="{{type==3}}">省钱好物1元起</view>
+        <view class="tips2" wx:if="{{type==4}}">16点 01:05:03</view>
+        <view class="font18 a46 margintop10">更多 ＞</view>
+    </navigator>
+    <view class="product-list">
+        <block wx:if="{{type==1}}">
+            <block wx:for="{{data}}" wx:key>
+                <v-product type="{{type}}" data="{{item}}"></v-product>
+            </block>
+        </block>
+
+        <block wx:else>
+            <v-product type="{{type}}"></v-product>
+            <v-product type="{{type}}"></v-product>
+        </block>
+    </view>
+</view>

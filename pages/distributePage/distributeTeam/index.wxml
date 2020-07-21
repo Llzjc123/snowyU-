@@ -1,0 +1,35 @@
+<view class="distribute-team-container">
+    <view class="team-nav font30">
+        <view class="level first-level" bindtap="selectLevel1">
+            一级 ( {{level_one_num}} )
+            <view class="line-bottom" hidden="{{level !== 1}}"></view>
+        </view>
+        <view class="level second-level" bindtap="selectLevel2">
+            二级 ( {{level_two_num}} )
+            <view class="line-bottom" hidden="{{level !== 2}}"></view>
+        </view>
+    </view>
+    <scroll-view scroll-y style="height:{{scrollPxHeight}}px;" class="scroll-box">
+        <view wx:if="{{teamList.length==0}}" class="no-more-data">暂无数据</view>
+        <block wx:for="{{teamList}}" wx:key>
+            <view class="team-item">
+                <view class="team-top">
+                    <view class="item-info">
+                        <view class="team-img">
+                            <image src="{{item.img_url}}" style="width:110rpx;height:110rpx;"></image>
+                        </view>
+                        <view style="margin-left:18rpx;">
+                            <view class="font30 bold">{{item.nickname}}</view>
+                            <view class="register-date font22">注册时间：{{item.add_time}} </view>
+                        </view>
+                    </view>
+                    <view class="item-number font22 bold">推广{{item.count}}人</view>
+                </view>
+                <view class="team-bottom font24">
+                    <view class="money">消费金额：{{item.xf_total}}</view>
+                    <view class="order">{{item.count}}个订单</view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>

@@ -1,0 +1,121 @@
+.poverty-rank-container {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+
+.poverty-rank-container .occupancy-bg {
+    position: relative;
+}
+
+.poverty-rank-container .bg-color {
+    background: #f8614a;
+    height: 90rpx;
+    width: 100%;
+}
+
+.poverty-rank-container .bg-fff {
+    width: 100%;
+    height: 120rpx;
+}
+
+.poverty-rank-container .activity-banner {
+    width: 690rpx;
+    height: 210rpx;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.poverty-rank-container .activity-banner image {
+    width: 100%;
+    height: 100%;
+}
+
+.poverty-rank-container .scroll-wrapper {
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.poverty-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16rpx;
+}
+
+.poverty-nav image {
+    width: 220rpx;
+    height: 150rpx;
+    display: block;
+}
+
+.contribution-wrapper .contribution-img {
+    width: 690rpx;
+    height: 136rpx;
+    margin-top: 16rpx;
+}
+
+.contribution-img image {
+    width: 100%;
+    height: 100%;
+}
+
+.contribution-wrapper .rank-table {
+    padding: 0 28rpx 44rpx 28rpx;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 28rpx;
+}
+
+.rank-table .table-th {
+    display: flex;
+    justify-content: space-between;
+    font-size: 32rpx;
+    padding-top: 50rpx;
+}
+.rank-table .table-th>view{
+    flex:1;
+    text-align: center;
+}
+.rank-table .table-td {
+    display: flex;
+    justify-content: space-between;
+    font-size: 26rpx;
+    color: #808080;
+    font-weight: bold;
+    height: 101rpx;
+    line-height: 101rpx;
+    border-bottom: 1rpx solid #eee;
+}
+.rank-table .table-td>view{
+     flex:1;
+    text-align: center;
+}
+.table-td .td-rank {
+    width:76rpx;
+    text-align: center;
+    /* padding-left: 24rpx; */
+}
+
+.table-td .td-department {
+    overflow: hidden;
+    /* padding-left: 24rpx; */
+    /* width:100rpx; */
+}
+
+.rank-table .table-td .rank-img {
+    width: 76rpx;
+    height: 69rpx;
+}
+
+.rank-img image {
+    width: 76rpx;
+    height: 69rpx;
+    position: relative;
+    top: 20rpx;
+}
+
+.person {
+    margin-bottom: 40rpx;
+}

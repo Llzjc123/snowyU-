@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "搜索",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "v-product-list": "/components/product03/index",
+        "v-shop": "/components/classifyShop/index",
+        "v-loading-more": "/components/moredLoading/index",
+        "v-loading": "/components/loading/index"
+    }
+}

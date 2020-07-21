@@ -1,0 +1,54 @@
+<view class="order-inner">
+    <view class="order-top font24">
+        <view class="a666">订单号：{{data.order_id}}</view>
+        <view wx:if="{{data.paid == 0}}" class='status-txt'>待付款
+        </view>
+        <view wx:elif="{{data.paid && data.status == 0}}" class='status-txt'>待发货
+        </view>
+        <view wx:elif="{{data.paid && data.status == 1}}" class='status-txt'>卖家已发货
+        </view>
+        <view wx:elif="{{data.paid && data.status == 3}}" class='status-txt'>交易成功
+        </view>
+        <view wx:elif="{{data.paid && data.status == 4}}" class='status-txt'>已完成
+        </view>
+        <view wx:elif="{{data.paid && data.status == -1}}" class='status-txt'>申请退款
+        </view>
+    </view>
+    <view class="order-center-box">
+        <view class="order-center" wx:for="{{data.goodslist}}" wx:key="key">
+            <view class="order-img">
+                <image src="{{item.productInfo.image}}"></image>
+            </view>
+            <view class="" style="flex:1;margin-left:20rpx;">
+                <view class="center-top">
+                    <view class="center-left">
+                        <view class="order-name font24 bold">{{item.productInfo.store_name}}</view>
+                        <view class="font20" style="color:#808080;">{{item.productInfo.store_info}}</view>
+                    </view>
+                    <view class="center-right">
+                        <view class="font26 bold">
+                            <text class="font16">￥</text>{{item.productInfo.price}}</view>
+                        <view style="text-align:right;margin-top:10rpx;" class="font20">x{{item.cart_num}}</view>
+                    </view>
+                </view>
+
+            </view>
+
+        </view>
+        <view class="center-bottom">
+            <view wx:if="{{data.deduction_price>0}}" class="font24 a999" style="text-align:right;">店铺优惠：-￥{{data.deduction_price}}</view>
+            <view class='all-price font24' style='text-align:right'>共{{data.goodslist.length}}件商品 合计：￥{{data.pay_price}}</view>
+        </view>
+
+    </view>
+    <view class="order-bottom">
+        <view class="address-info">
+            <view class="address font24">地址信息：{{data.user_address}}</view>
+            <view> </view>
+        </view>
+        <view wx:if="{{data.paid && data.status == 0}}"  bindtap="payOrder" class="btn font24">发货
+        </view>
+        <view wx:elif="{{data.paid && data.status == -1}}" bindtap="tuikuan" class='btn font24'>同意退款
+        </view>
+    </view>
+</view>

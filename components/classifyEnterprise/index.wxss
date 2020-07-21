@@ -1,0 +1,5 @@
+.enterprise-container {
+  padding: 16rpx 19rpx 0 19rpx;
+  background: #eee;
+  box-sizing: border-box;
+}

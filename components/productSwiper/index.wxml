@@ -1,0 +1,23 @@
+<view class="product-swiper" wx:if="{{arr.length>0}}">
+    <view class="title-view">
+        <view class="title">
+            <view class="font36 bold">爆款好货</view>
+            <view class="line"></view>
+            <view class="font24">爆款直降40%</view>
+        </view>
+    </view>
+    <view class="product-view">
+        <swiper class="swiper" indicator-dots="{{true}}" indicator-color="#f7f7f8" autoplay="{{true}}" indicator-active-color="#ff2f3e" interval="{{interval}}" duration="{{duration}}" circular="{{true}}">
+            <block wx:key wx:for="{{arr}}">
+                <swiper-item class="slide-image-view">
+                    <view class="product-list-view">
+                        <block wx:for="{{item}}" wx:key>
+                            <v-product-list data="{{item}}"></v-product-list>
+                        </block>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+
+    </view>
+</view>

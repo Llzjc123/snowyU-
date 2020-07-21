@@ -1,0 +1,43 @@
+.category-container {
+    width: 100%;
+    height: 58rpx;
+    background: #ff2f3e;
+}
+
+.category-scroll {
+    height: 100%;
+    width: 100%;
+}
+
+.category-scroll-wrapper {
+    overflow: hidden;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.category {
+    display: inline-flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 22rpx;
+    border-radius: 6rpx;
+    font-family: PingFang-SC-Regular;
+}
+
+.category .box {
+    height: 48rpx;
+    color: #fff;
+    font-size: 26rpx;
+}
+
+.category .line {
+    width: 20rpx;
+    height: 4rpx;
+    background: #fff;
+}
+
+.category:last-child view {
+    margin-right: 24rpx;
+}

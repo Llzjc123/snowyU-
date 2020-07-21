@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "扶贫动态",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "enablePullDownRefresh": true,
+    "usingComponents": {}
+}

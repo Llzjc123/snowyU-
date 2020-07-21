@@ -1,0 +1,119 @@
+<wxs src="../../utils/filter.wxs" module="util" />
+<view class="container">
+    <view class="top-view"></view>
+    <view class="edit-wrapper firsttext">
+        <view class='edit-inner'>
+            <text class="font28 afff firsttext">共有{{page_count}}件宝贝</text>
+            <view class="edit-btn" bindtap='btnedittap' wx:if='{{!foothidden}}'>编辑</view>
+            <view class='edit-btn' bindtap='btnedittap' wx:if='{{foothidden}}'>完成</view>
+        </view>
+    </view>
+    <scroll-view class="scroll-wrapper" style='height:{{scrollPxHeight}}px' scroll-y>
+        <view class='car-list'>
+            <block wx:for="{{cartList}}" wx:for-item="listItem" wx:for-index="listIndex" wx:key="{{listItem}}">
+                <view class="list-item-wrapper">
+                    <view class="store-name" data-index='{{listIndex}}' bindtap='switchStoreSelect'>
+                        <label class="checkbox">
+                            <checkbox checked="{{listItem.checked}}" />
+                        </label>
+                        <text class="padding20">{{listItem.store.shop_name?listItem.store.shop_name:'商城'}}</text>
+                        <image src="../images/arrow-right2.png" style="width:10rpx;height:15rpx;margin-left:4rpx;"></image>
+                    </view>
+                    <view class='list-item flex' wx:for="{{listItem.product}}" wx:key="{{item}}">
+                        <view class='select-btn flex' data-listindex="{{listIndex}}" data-index='{{index}}' bindtap='switchSelect'>
+                            <label class="checkbox">
+                                <checkbox value="{{index}}" checked="{{item.checked}}" />
+                            </label>
+                        </view>
+                        <view class='picture'>
+                            <image mode="aspectFill" src='{{item.suk?item.v_img_url:item.img_url }}'></image>
+                        </view>
+                        <view class='pro-info'>
+                            <view class='pro-title twotext'>{{item.store_name}}</view>
+                            <view class='pro-des' wx:if="{{item.suk}}" data-item="{{item}}" data-id="{{item.product_id}}" data-cartid="{{item.list_id}}" bindtap="changeSuk">
+                                <view>{{item.suk}}</view>
+                                <image class="car-arrow" src="../images/car-arrow.png"></image>
+                            </view>
+                            <view class='pro-p rice aff2'>
+                                <text class="font20">￥</text>
+                                <text class="din-bold ">{{item.suk?item.v_price:item.price}}</text>
+                            </view>
+                        </view>
+                        <view class='count-wrapper flex'>
+                            <text data-index="{{index}}" data-listindex="{{listIndex}}" bindtap="numDescClick" class='{{minusStatus}}'>-</text>
+                            <input class='num' data-item='{{index}}' data-listindex="{{listIndex}}" type="number" value='{{item.cart_num}}' bindblur='setNumber' />
+                            <text class='add' data-index="{{index}}" data-listindex="{{listIndex}}" bindtap="numAddClick">+</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+            <view wx:if="{{cartList.length==0}}" class="no-more-data" style="color:#fff;">暂无相应商品，快去首页看看吧</view>
+        </view>
+    </scroll-view>
+    <view class='foot'>
+        <view class='pay-wrapper flex' hidden='{{foothidden}}'>
+            <view class='left-wrapper flex'>
+                <view class="flex">
+                    <view class='all-select' bindtap="allChecked">
+                        <label class="checkbox">
+                            <checkbox value="Boolean" checked="{{isAllSelect}}" />
+                        </label>
+                    </view>
+                    <view class='font28 a666'>全选</view>
+                </view>
+
+                <view class='count-num'>
+                    <text class="font32 a333 ">合计:</text>
+                    <text class="font32 din-normal">￥{{countmoney}}</text>
+                </view>
+            </view>
+            <view class='flex' bindtap='confirmOrder'>
+                <view class='pay-btn'>结算({{cartNum}})</view>
+            </view>
+        </view>
+        <view class='delete-wrapper flex' hidden='{{!foothidden}}'>
+            <view class='left-wrapper flex'>
+                <view class="flex">
+                    <view class='all-select' bindtap="allChecked">
+                        <label class="checkbox">
+                            <checkbox value="Boolean" checked="{{isAllSelect}}" />
+                        </label>
+                    </view>
+                    <view class='font28 a666'>全选</view>
+                </view>
+            </view>
+            <view class='right-wrapper flex'>
+                <!-- <view class='collection-btn' bindtap='collectAll'>移入收藏夹</view> -->
+                <view class='delete-btn' bindtap='cartDelAll'>删除</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="model-bg {{show==true ? 'show':''}} {{prostatus==true ? 'show':''}}" bindtap='modelbg'></view>
+<view class="model-proinfo {{prostatus==true ? 'show':''}}">
+    <view class='hd-wrapper'>
+        <image src='{{changeSukProduct.img_url?changeSukProduct.img_url:changeSukProduct.image}}'></image>
+        <view class='txt-info'>
+            <view class='title'>{{changeSukProduct.store_name}}</view>
+            <view class='num flex'>
+                <view class='price'>￥{{changeSukProduct.price}}</view>
+                <view class='stock'>库存：{{changeSukProduct.stock}}{{changeSukProduct.unit_name}}</view>
+            </view>
+        </view>
+    </view>
+    <view class='bd-wrapper'>
+        <block wx:for="{{productAttr}}" wx:key="key" wx:for-index="fatherIndex">
+            <view class='parameter-item'>
+                <view class='title-bar'>{{item.attr_name}}</view>
+                <view class='item-wrapper'>
+                    <block wx:for="{{item.attr_values}}" wx:for-index="index" wx:key="key" wx:for-item="items">
+                        <view data-key="{{items.val}}" data-index="{{index}}" data-fatherindex="{{fatherIndex}}" data-name="{{item.attr_name}}" class='item {{items.check?"sizecolor":""}}' bindtap='tapsize'>{{items.val}}</view>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view style='height:100rpx;'></view>
+    <button class='foot-wrapper' bindtap='subBuy'>确定</button>
+</view>
+<view class='mask' wx:if="{{prostatus}}" bindtap='modelbg'></view>

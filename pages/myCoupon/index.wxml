@@ -1,0 +1,23 @@
+<view class="coupon-wrapper" wx:if="{{loading}}">
+    <block wx:for="{{myCouponList}}" wx:key>
+        <view class="coupon-list" bindtap='getCoupon' data-id="{{item.list_id}}" data-item="{{item}}">
+            <image src="../images/coupon-bg.png" class="bg-size"></image>
+            <view class="coupon-cpntent">
+                <view class="right">
+                    <view class="font34 bold ">
+                        <text class="font20">￥</text>
+                        <text class="din-normal font36">{{item.coupon_price}}</text>
+                        <text class="font24" style="margin-left:8rpx;">{{item.title?item.title:item.coupon_title}}</text>
+                    </view>
+                    <view class="font24">满减优惠券</view>
+                    <view class="font20">使用日期: {{item.add_time}}-{{item.end_time}}</view>
+                    <view class="use-now" wx:if="{{type === 0}}">
+                        <image src="../images/use-coupon.png"></image>
+                    </view>
+                    <view class="receive-now" wx:else>立即领取</view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class="no-more-data" wx:if="{{myCouponList.length==0}}">暂无优惠券</view>
+</view>

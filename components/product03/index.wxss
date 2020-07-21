@@ -1,0 +1,105 @@
+@import "../common.wxss";
+
+.product-list {
+    margin-left: 24rpx;
+    width: 200rpx;
+    height: 330rpx;
+    padding-top: 20rpx;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+    background: #fff;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+
+.like-product-list {
+    margin: 0;
+    width: 346rpx;
+    height: 546rpx;
+    padding: 0;
+    /* padding :30rpx 24rpx; */
+    margin-bottom: 10rpx;
+    justify-content: space-between;
+}
+
+.title-display {
+    display: flex;
+    flex-direction: column;
+    height: 80rpx;
+}
+
+.title-display .overflowHide {
+    width: 236rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.like-product-list .title-display .line40 {
+    line-height: 40rpx;
+    padding: 0 100rpx 0 24rpx;
+}
+
+.like-product-list .text {
+    padding: 0 24rpx;
+    flex: 1;
+    align-items: center;
+}
+
+.like-product-list .text .Invalid {
+    width: 72rpx;
+    text-align: center;
+    line-height: 32rpx;
+    height: 32rpx;
+    background: #ccc;
+    margin-top: 10rpx;
+    border-radius: 4rpx;
+}
+
+.like-product-list .marginTop48 {
+    margin-top: 48rpx;
+}
+
+.product-list .product-img {
+    width: 194rpx;
+    height: 194rpx;
+    overflow: hidden;
+}
+
+.like-product-list .product-img {
+    width: 346rpx;
+    height: 346rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-list .product-img image {
+    width: 100%;
+    height: 100%;
+}
+
+.like-product-list .product-img image {
+    width: 346rpx;
+    height: 346rpx;
+}
+
+.product-list .car-ico {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    bottom: 6rpx;
+    right: 6rpx;
+}
+
+.like-product-list .car-ico {
+    bottom: 30rpx;
+    right: 24rpx;
+}
+
+.like-product-list .delete-ico {
+    width: 30rpx;
+    height: 32rpx;
+}

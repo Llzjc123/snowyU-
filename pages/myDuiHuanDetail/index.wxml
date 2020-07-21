@@ -1,0 +1,32 @@
+<view class="result-wrapper">
+    <view class="title-view">
+        <view style="margin-right:20rpx;">卡类型：钻石卡</view>
+        <view>金额：500元</view>
+    </view>
+    <view class="goods-view">
+        <view class="goods-list" wx:for="{{product}}" wx:key>
+            <image class="goods-image" src="{{item.image}}"></image>
+            <view class="good-view">
+                <view class="good-name twotext">{{item.store_name}}</view>
+                <view style="width:100%;display:flex;justify-content: space-between;">
+                    <view class="good-info">{{item.store_info}}</view>
+                    <view style="color:#333333;font-size:28rpx;">{{item.number}}{{item.unit_name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='information'>
+        <view class='information-li flex'>
+            <label>收货人</label>
+            <input type='text' placeholder='请输入姓名' placeholder-class='placeholder' name="contacts" disabled="{{true}}" value="{{thk.contacts}}" />
+        </view>
+        <view class='information-li flex'>
+            <label>联系电话</label>
+            <input type='number' maxlength="11" placeholder-class='placeholder' placeholder='请输入联系电话' name="phone" disabled="{{true}}" value="{{thk.phone}}" ></input>
+        </view>
+        <view class='information-li flex'>
+            <label>收货地址</label>
+            <input type='text' placeholder-class='placeholder' placeholder='请填写具体地址' name="address" disabled="{{true}}" value="{{thk.address}}" ></input>
+        </view>
+    </view>
+</view>

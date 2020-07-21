@@ -1,0 +1,71 @@
+<form bindsubmit="formSubmit">
+    <view class="commcon" wx:for="{{listInfo}}" wx:key>
+        <view class='commcon-header flex'>
+            <view class='commcon-pic'>
+                <image src='{{item.product_attr_unique?item.productInfo.attrInfo.image:item.productInfo.image}}'></image>
+            </view>
+            <view class='commcon-con flex'>
+                <view class='commcon-name'>{{item.productInfo.store_name}}</view>
+                <view class='commcon-text' wx:if="{{item.product_attr_unique}}">
+                    {{item.productInfo.attrInfo.suk}}
+                </view>
+                <view class='commcon-money'>
+                    <text>￥</text>{{item.product_attr_unique?item.productInfo.attrInfo.price:item.productInfo.price}}
+                    <text></text>
+                    <text class='commcon-num'>x{{item.cart_num}}</text>
+                </view>
+            </view>
+        </view>
+
+        <view class='commcon-ping'>
+            <textarea placeholder='宝贝满足你的期待么？说说你的想法，分享给想买的他们吧~' placeholder-class='placeholder' name='comment{{index}}'></textarea>
+            <!-- <view class='imgul'>
+                <block wx:for="{{dataimg}}" wx:key>
+                    <view class='imgpic'>
+                        <image src='{{item.data.url}}' class='dataimg'></image>
+                        <icon class='iconfont icon-guanbi guanbi' data-id='{{index}}' bindtap='delImages'></icon>
+                    </view>
+                </block>
+                <view class='upimg' bindtap='uploadpic' hidden='{{hidden}}'></view>
+            </view> -->
+        </view>
+        <view class='commcon-ul flex'>
+            <view class='commcon-li flex'>
+                <text class='li-lien'>商品质量</text>
+                <view class='commconxing li-lien'>
+                    <image bindtap='tapxing' data-index='1' class="iconfont" src="../images/detail-collect{{item.xing>=1?'-active':''}}.png" data-idx="{{index}}"></image>
+                    <image bindtap='tapxing' data-index='2' data-idx="{{index}}" class="iconfont" src="../images/detail-collect{{item.xing>=2?'-active':''}}.png"></image>
+                    <image bindtap='tapxing' data-index='3' data-idx="{{index}}" class='iconfont' src="../images/detail-collect{{item.xing>=3?'-active':''}}.png"></image>
+                    <image bindtap='tapxing' data-index='4' data-idx="{{index}}" class='iconfont' src="../images/detail-collect{{item.xing>=4?'-active':''}}.png"></image>
+                    <image bindtap='tapxing' data-index='5' data-idx="{{index}}" class='iconfont' src="../images/detail-collect{{item.xing>=5?'-active':''}}.png"></image>
+                </view>
+                <text class='li-lien li-lien3' hidden='{{item.xinghidden}}'>{{item.xing}}分</text>
+            </view>
+            <view class='commcon-li flex'>
+                <text class='li-lien'>服务态度</text>
+                <view class='commconxing li-lien'>
+                    <image bindtap='tapxing2' data-index='1' class="iconfont" src="../images/detail-collect{{item.xing2>=1?'-active':''}}.png" data-idx="{{index}}"></image>
+                    <image bindtap='tapxing2' data-index='2' class="iconfont" src="../images/detail-collect{{item.xing2>=2?'-active':''}}.png" data-idx="{{index}}"></image>
+                    <image bindtap='tapxing2' data-index='3' class='iconfont' src="../images/detail-collect{{item.xing2>=3?'-active':''}}.png" data-idx="{{index}}"></image>
+                    <image bindtap='tapxing2' data-index='4' class='iconfont' src="../images/detail-collect{{item.xing2>=4?'-active':''}}.png" data-idx="{{index}}"></image>
+                    <image bindtap='tapxing2' data-index='5' class='iconfont' src="../images/detail-collect{{item.xing2>=5?'-active':''}}.png" data-idx="{{index}}"></image>
+                </view>
+                <text class='li-lien li-lien3' hidden='{{item.xinghidden2}}'>{{item.xing2}}分</text>
+            </view>
+            <!-- <view class='commcon-li flex'>
+                <text class='li-lien'>物流服务</text>
+                <view class='commconxing li-lien'>
+                    <image bindtap='tapxing3' data-index='1' class="iconfont" src="../images/detail-collect{{xing3>=1?'-active':''}}.png"></image>
+                    <image bindtap='tapxing3' data-index='2' class="iconfont" src="../images/detail-collect{{xing3>=2?'-active':''}}.png"></image>
+                    <image bindtap='tapxing3' data-index='3' class='iconfont' src="../images/detail-collect{{xing3>=3?'-active':''}}.png"></image>
+                    <image bindtap='tapxing3' data-index='4' class='iconfont' src="../images/detail-collect{{xing3>=4?'-active':''}}.png"></image>
+                    <image bindtap='tapxing3' data-index='5' class='iconfont' src="../images/detail-collect{{xing3>=5?'-active':''}}.png"></image>
+                </view>
+                <text class='li-lien li-lien3' hidden='{{xinghidden3}}'>{{xing3}}分</text>
+            </view> -->
+        </view>
+
+
+    </view>
+    <button class='commcon-btn' formType="submit">发布评价</button>
+</form>

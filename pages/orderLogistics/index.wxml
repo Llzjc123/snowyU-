@@ -1,0 +1,33 @@
+<view class="header">
+    <!-- <view class="product-wrapper flex">
+        <image class="product-image" src='../images/product02.png'></image>
+        <view class='shop-text'>
+            <view class='font24 line'>雪天无碘盐雪天无碘盐雪天无碘盐</view>
+        </view>
+        <view>
+            <view class='font24'>￥29.90</view>
+            <view class='font20 a909090' style='text-align:right'>x1</view>
+        </view>
+    </view> -->
+    <view class='header-text' wx:if="{{wuliuList}}">
+        <view class='header-flag'>物流状态：
+            <text class='flag' wx:if="{{wuliuList.states}}">{{wuliuList.states}}</text>
+        </view>
+        <view class='express'>物流公司：{{wuliuList.wuliu_company}} </view>
+        <view class='header-number'>物流单号：{{wuliuList.number}}</view>
+
+        <!-- <view class='header-number'>发货时间：2019-06-12 13:12:32</view> -->
+    </view>
+    <view class='header-text' wx:else>物流状态：自提成功</view>
+</view>
+<view class='log-ul' wx:if="{{wuliuList.data.length}}">
+    <block wx:for="{{wuliuList.data}}" wx:key>
+        <view class='log-li flex'>
+            <view class='log-yuan active'></view>
+            <view class='log-info '>
+                <view class='active-text'>{{item.context}}</view>
+                <view class='log-time'>{{item.time}}</view>
+            </view>
+        </view>
+    </block>
+</view>

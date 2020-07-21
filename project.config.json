@@ -1,0 +1,298 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.2",
+	"appid": "wx8786e880b1e6d08d",
+	"projectname": "mini-nfcp",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 34,
+			"list": [
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": "id=2"
+				},
+				{
+					"id": 1,
+					"name": "car",
+					"pathName": "pages/car/car",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "classify",
+					"pathName": "pages/classify/classify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "myList",
+					"pathName": "pages/orderList/index",
+					"query": "id=2",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "productDetail",
+					"pathName": "pages/productDetail/index",
+					"query": "productId=148",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "searchPage",
+					"pathName": "pages/searchPage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pages/orderConfirm/index",
+					"pathName": "pages/orderConfirm/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "pages/productSort/productSort",
+					"pathName": "pages/productSort/productSort",
+					"query": "pid=11&name=木耳专区",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "pages/distributePage/index",
+					"pathName": "pages/distributePage/index",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"id": 16,
+					"name": "pages/my/orderManage/index",
+					"pathName": "pages/my/orderManage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "nowbuy",
+					"pathName": "pages/orderConfirm/index",
+					"query": "type=nowbuy",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "pages/my/orderManage/index",
+					"pathName": "pages/my/orderManage/index",
+					"query": "type=order",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "pages/distributePage/cashWithdrawal/index",
+					"pathName": "pages/distributePage/cashWithdrawal/index",
+					"query": "type=order",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/refundAftersSale/index",
+					"pathName": "pages/refundAftersSale/index",
+					"query": "type=order",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/payOrder/index",
+					"pathName": "pages/my/payOrder/index",
+					"query": "id=wx2019072319101810007",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myCoupon/index",
+					"pathName": "pages/myCoupon/index",
+					"query": "orderId=655da579_fd15_49c0_b0de_1c6e4718&money=36&merId=6&type=nowbuy",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/povertyMessage/index",
+					"pathName": "pages/povertyMessage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/consumePoverty/index",
+					"pathName": "pages/consumePoverty/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/povertyRecruit/index",
+					"pathName": "pages/povertyRecruit/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 19,
+					"name": "pages/orderDetail/index",
+					"pathName": "pages/orderComment/index",
+					"query": "order_id=902",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/distributePage/index",
+					"pathName": "pages/distributePage/index",
+					"query": "order_id=902",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shopPage/index",
+					"pathName": "pages/shopPage/index",
+					"query": "id=11",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/consumePoverty/index",
+					"pathName": "pages/consumePoverty/index",
+					"query": "id=11",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/consumePoverty/index",
+					"pathName": "pages/consumePoverty/index",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/myFeedback/index",
+					"pathName": "pages/my/myFeedback/index",
+					"query": "productId=148",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/povertyActivity/index",
+					"pathName": "pages/povertyActivity/index",
+					"query": "id=68&type=bm",
+					"scene": null
+				},
+				{
+					"id": 26,
+					"name": "pages/consumePoverty/index",
+					"pathName": "pages/consumePoverty/index",
+					"query": "id=68&type=bm",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/povertyMessage/index?type=1",
+					"query": "id=68&type=bm",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/povertyMessage/index?type=1",
+					"pathName": "pages/povertyMessage/index",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cardPage/index",
+					"pathName": "pages/cardPage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myDuiHuan/index",
+					"pathName": "pages/myDuiHuan/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myDuiHuanDetail/index",
+					"pathName": "pages/myDuiHuanDetail/index",
+					"query": "id=7",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/miao-list/miao-list",
+					"pathName": "pages/miao-list/miao-list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/orderLogistics/index",
+					"pathName": "pages/orderLogistics/index",
+					"query": "orderId=1213",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/orderConfirm/index",
+					"pathName": "pages/orderConfirm/index",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

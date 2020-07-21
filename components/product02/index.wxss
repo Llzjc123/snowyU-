@@ -1,0 +1,77 @@
+@import "../common.wxss";
+
+.product02-wrapper {
+    padding: 0 26rpx;
+    height: 324rpx;
+}
+
+.product02-wrapper .inner-container {
+    width: 664rpx;
+    height: 100%;
+    border-bottom: 2rpx solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.product02-wrapper .product-img {
+    width: 276rpx;
+    height: 276rpx;
+    border-radius: 6rpx;
+    overflow: hidden;
+}
+
+.product02-wrapper .product-img image {
+    width: 276rpx;
+    height: 276rpx;
+    border-radius: 6rpx;
+}
+
+.product02-wrapper .detail {
+    flex: 1;
+    margin-left: 22rpx;
+    position: relative;
+}
+
+.product02-wrapper .tips {
+    font-size: 20rpx;
+    color: #ff2f3e;
+    border: 2rpx solid #ff2f3e;
+    padding: 2rpx 4rpx;
+    width: 100rpx;
+    text-align: center;
+    border-radius: 6rpx;
+}
+
+.product02-wrapper .cart1 {
+    display: flex;
+    height: 62rpx;
+    align-items: center;
+    margin-top: 30rpx;
+}
+
+.product02-wrapper .cart1 image {
+    width: 20rpx;
+    height: 20rpx;
+    margin-right: 10rpx;
+}
+
+.product02-wrapper .prize {
+    height: 56rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product02-wrapper .prize .left {
+    display: inline-flex;
+    align-items: center;
+}
+
+.product02-wrapper .right {
+    margin-right: 6rpx;
+}
+
+.product02-wrapper .right image {
+    width: 50rpx;
+    height: 50rpx;
+}

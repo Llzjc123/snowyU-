@@ -1,0 +1,106 @@
+<import src="/wxParse/wxParse.wxml" />
+<view class="distribute-container">
+    <view class="cash-withdrawal">
+        <view class="cash-number">
+            <view class="withdrawal-desc font26 afff">可提现金额</view>
+            <view class="font56 afff">
+                <text class="font20">￥</text>{{ktx}}
+            </view>
+            <navigator hover-class="none" class="btn-box" url="cashWithdrawal/index">
+                <image src="../images/cash-btn.png" style="width:150rpx;height:60rpx;display:inline-block;"></image>
+            </navigator>
+            <view class="font20 afff" style="margin-top:10rpx;">＊每月15日为提现申请日</view>
+        </view>
+        <view class="bg-position"></view>
+        <view class="absolute-bottom">
+            <view class="commission-left">
+                <view class="word-color font40 bold">
+                    <text class="font16">￥</text>{{tx}}</view>
+                <view class="font22" style="color:#8d8d8d;">已提现佣金</view>
+            </view>
+            <view class="nocash-right">
+                <view class="word-color font40 bold">
+                    <text class="font16">￥</text>{{wjs}}</view>
+                <view class="font22" style="color:#8d8d8d;">未结算佣金</view>
+            </view>
+            <view class="center-line"></view>
+        </view>
+    </view>
+    <view class="distribute-nav">
+        <view class="nav-item" bindtap="applyDistribute">
+            <view>
+                <image src="../images/apply-icon.png" style="width:53rpx;height:54rpx;"></image>
+            </view>
+            <view class="color8d font22">申请分销</view>
+        </view>
+        <navigator hover-class="none" class="nav-item" url="distributeOrders/index?type=order">
+            <view>
+                <image src="../images/order-icon.png" style="width:48rpx;height:54rpx;"></image>
+            </view>
+            <view class="color8d font22">分销订单</view>
+        </navigator>
+        <navigator hover-class="none" class="nav-item" url="distributeOrders/index?type=bill">
+            <view>
+                <image src="../images/bill-icon.png" style="width:54rpx;height:54rpx;"></image>
+            </view>
+            <view class="color8d font22">分销账单</view>
+        </navigator>
+        <navigator hover-class="none" class="nav-item" url="discountRecord/index">
+            <view>
+                <image src="../images/withdrawal-icon.png" style="width:55rpx;height:55rpx;"></image>
+            </view>
+            <view class="color8d font22">提现记录</view>
+        </navigator>
+        <view bindtap="toLink" class="nav-item">
+            <view>
+                <image src="../images/qrcode-icon.png" style="width:50rpx;height:50rpx;"></image>
+            </view>
+            <view class="color8d font22">推广二维码</view>
+        </view>
+        <!-- <navigator hover-class="none" class="nav-item" url="distributeTeam/index">
+            <view>
+                <image src="../images/team-icon.png" style="width:62rpx;height:50rpx;"></image>
+            </view>
+            <view class="color8d font22">分销团队</view>
+        </navigator> -->
+    </view>
+    <view class="distribute-list">
+        <block wx:for="{{product}}" wx:key>
+            <view class="product-item">
+                <view class="item-left">
+                    <image src="{{item.image}}" style="width:139rpx;height:140rpx;"></image>
+                </view>
+                <view class="item-right">
+                    <view class="item-title font26 bold">{{item.store_name}}</view>
+                    <view class="item-money">
+                        <view class="font26 bold">
+                            <text class="font16">￥</text>{{item.price}}</view>
+                        <view>
+                            <text class="font24">分销后佣金:  </text>
+                            <text class="font16">￥</text>
+                            <text class="font26 bold">{{item.money}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+
+    </view>
+    <view class="fixed-bottom font30" bindtap="showModal">
+        查看分销说明
+    </view>
+</view>
+
+<view class="dask" hidden="{{hiddenbnModal}}">
+    <view class="modal-isbn">
+        <view class="modal-close" bindtap='hiddenModal'>
+            <image src="https://cdnst1.rryue.cn/res/pages/images/modal-close.png"></image>
+        </view>
+        <view class="content">
+            <view class="title">分销说明</view>
+            <view>
+                <template is="wxParse" data="{{wxParseData:description.nodes}}" />
+            </view>
+        </view>
+    </view>
+</view>

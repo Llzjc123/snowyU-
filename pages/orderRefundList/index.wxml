@@ -1,0 +1,46 @@
+<view class='orders-list'>
+    <block wx:for="{{orderlist}}" wx:key>
+        <block wx:for="{{item}}" wx:key>
+            <view class='items'>
+                <view class='pay-status flex'>
+                    <view class='left-wrapper'>
+                        <view wx:if="{{item.refund_status == 1}}" class='status-txt'>商家审核中,请耐心等待
+                        </view>
+                        <view wx:elif="{{item.refund_status == 2}}" class='status-txt'>已为您退款，感谢您的支持
+                        </view>
+                    </view>
+                </view>
+                <navigator hover-class="none" url='/pages/orderRefundDetail/index?order_id={{item.list_id}}' class='info-list'>
+                    <block wx:for="{{item.goodslist}}" wx:for-item="infoItem" wx:key="key">
+                        <view class='pro-item flex'>
+                            <image class="product-image" src='{{infoItem.productInfo.image}}'></image>
+                            <view class='wrapper flex'>
+
+                                <view class='item-info flex'>
+                                    <view class="title">
+                                        <view class='twotext font28'>{{infoItem.productInfo.store_name}}</view>
+                                        <view class='font24' wx:if="{{infoItem.product_attr_unique}}" style='color:#939393'>{{infoItem.productInfo.attrInfo.suk}}</view>
+                                        <view wx:else class="font24">{{infoItem.productInfo.store_info}}</view>
+                                    </view>
+                                    <view>
+                                        <view class="font24">
+                                            <text>￥</text>{{infoItem.truePrice}}</view>
+                                        <view style="text-align:right;" class="font20 a909090">x{{infoItem.cart_num}}</view>
+                                    </view>
+
+                                </view>
+
+                            </view>
+                        </view>
+                    </block>
+                    <view class='all-price'>共{{item.total_num}}件商品 合计: ￥{{item.total_price}}</view>
+                </navigator>
+                <view class='btn-wrapper flex'>
+                    <navigator hover-class="none" url='/pages/orderRefundDetail/index?order_id={{item.list_id}}' class='buypay'>查看详情</navigator>
+
+                </view>
+            </view>
+        </block>
+
+    </block>
+</view>

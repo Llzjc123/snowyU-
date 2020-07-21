@@ -1,0 +1,10 @@
+<view class="category-container">
+    <scroll-view scroll-x scroll-into-view="{{toView}}" class="category-scroll-wrapper" style="width:100%;height:100%">
+        <block wx:for="{{data}}" wx:key>
+            <view class="category">
+                <view bindtap="changeData" data-id="{{item.list_id}}" id="list-{{item.list_id}}" class="box">{{item.name}}</view>
+                <view class="line" wx:if="{{hightId==item.list_id}}"></view>
+            </view>
+        </block>
+    </scroll-view>
+</view>

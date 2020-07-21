@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "限时秒杀",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "v-product-group-buy": "/components/productGroupBuy/index",
+        "v-loading": "/components/loading/index"
+    }
+}

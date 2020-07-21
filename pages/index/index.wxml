@@ -1,0 +1,86 @@
+<view class="container" style="padding-top:110rpx;">
+    <v-search hasIcon="{{true}}" class="search-box"></v-search>
+    <scroll-view class="scroll-wrapper" scroll-y wx:if="{{loading}}">
+        <view class="inner-wrapper">
+            <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-height" circular="{{true}}">
+                <block wx:for="{{bannerList}}" wx:key>
+                    <swiper-item>
+                        <view class="slide-image-view" data-item="{{item}}" bindtap="toLink">
+                            <image src="{{item.pic}}" class="slide-image" />
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+            <view class="nav-wrapper">
+                <view class="nav-swiper">
+                    <v-nav-swiper navOneList="{{navOneList}}"></v-nav-swiper>
+                    <v-news newsList="{{newsList}}"></v-news>
+                </view>
+            </view>
+            <view class="view-nav-position"></view>
+
+            <view class="recommend-wrapper">
+                <view class="recommend-inner">
+                    <view class="group-one">
+                        <view bindtap="toLink" data-item="{{navHotList[0]}}" class="one-left">
+                            <image  mode="aspectFill" src="{{navHotList[0].pic}}"></image>
+                        </view>
+                        <view class="one-right">
+                            <view bindtap="toLink" data-item="{{navHotList[1]}}" class="right-top">
+                                <image  mode="aspectFill" src="{{navHotList[1].pic}}"></image>
+                            </view>
+                            <view bindtap="toLink" data-item="{{navHotList[2]}}" class="right-bottom">
+                                <image mode="aspectFill" src="{{navHotList[2].pic}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="group-two" wx:if="{{navHotList[3]}}">
+                        <view bindtap="toLink" data-item="{{navHotList[3]}}" class="two-left">
+                            <image mode="aspectFill" src="{{navHotList[3].pic}}"></image>
+                        </view>
+                        <view class="two-right" wx:if="{{navHotList[4]}}">
+                            <view bindtap="toLink" data-item="{{navHotList[4]}}" class="right-top">
+                                <image mode="aspectFill" src="{{navHotList[4].pic}}"></image>
+                            </view>
+                            <view class="right-bottom" wx:if="{{navHotList[5]}}">
+                                <view class="bottom-left" bindtap="toLink" data-item="{{navHotList[5]}}">
+                                    <image mode="aspectFill" src="{{navHotList[5].pic}}"></image>
+                                </view>
+                                <view wx:if="{{navHotList[6]}}" class="bottom-right" bindtap="toLink" data-item="{{navHotList[6]}}">
+                                    <image mode="aspectFill" src="{{navHotList[6].pic}}"></image>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="advertise-wrapper" wx:if="{{hdList.length}}">
+                <view class="advertise-inner" data-item="{{hdList[0]}}" bindtap="toLink">
+
+                    <image style="padding:0;margin:0;width:710rpx;border-radius:10rpx;" mode="widthFix" src="{{hdList[0].pic}}"></image>
+
+                </view>
+                <!-- <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="advertise-inner" circular="{{true}}">
+                    <block wx:for="{{hdList}}" wx:key>
+                        <swiper-item>
+                            <view class="advertise-img" data-item="{{item}}" bindtap="toLink">
+                                <image src="{{item.pic}}" class="slide-image" />
+                            </view>
+                        </swiper-item>
+                    </block>
+                </swiper> -->
+            </view>
+            <view class="like-wrapper">
+                <view class="like-product-list">
+                    <block wx:for="{{productList}}" wx:key>
+                        <block wx:for="{{item}}" wx:key>
+                            <v-like-product-list type="like" class="like-item" data="{{item}}"></v-like-product-list>
+                        </block>
+                    </block>
+                </view>
+            </view>
+            <v-loading-more hidden="{{!moreLoading}}" />
+        </view>
+    </scroll-view>
+    <v-loading wx:else />
+</view>

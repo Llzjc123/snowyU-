@@ -1,0 +1,97 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/classify/classify",
+        "pages/car/car",
+        "pages/my/my",
+        "pages/productSort/productSort",
+        "pages/consumePoverty/index",
+        "pages/povertyDynamics/index",
+        "pages/povertyRecruit/index",
+        "pages/povertyPurchase/index",
+        "pages/povertyMessage/index",
+        "pages/recruitDetail/index",
+        "pages/shopPage/index",
+        "pages/distributePage/index",
+        "pages/productDetail/index",
+        "pages/my/userInfo/index",
+        "pages/myCoupon/index",
+        "pages/my/myCollection/index",
+        "pages/my/myFeedback/index",
+        "pages/my/myConvenient/index",
+        "pages/my/myAddress/index",
+        "pages/my/myAddAddress/index",
+        "pages/my/myCoupon/index",
+        "pages/my/businessCenter/index",
+        "pages/my/orderManage/index",
+        "pages/my/businessLogin/index",
+        "pages/povertyActivity/index",
+        "pages/distributePage/cashWithdrawal/index",
+        "pages/distributePage/distributeOrders/index",
+        "pages/distributePage/discountRecord/index",
+        "pages/distributePage/distributeTeam/index",
+        "pages/orderList/index",
+        "pages/orderConfirm/index",
+        "pages/orderComment/index",
+        "pages/orderDetail/index",
+        "pages/orderRefund/index",
+        "pages/orderRefundList/index",
+        "pages/orderRefundDetail/index",
+        "pages/orderPayStatus/index",
+        "pages/orderLogistics/index",
+        "pages/refundAftersSale/index",
+        "pages/searchPage/index",
+        "pages/miao-list/miao-list",
+        "pages/pink-list/index",
+        "pages/promotionCard/index",
+        "pages/my/payOrder/index",
+        "pages/cardPage/index",
+        "pages/myDuiHuan/index",
+        "pages/myDuiHuanDetail/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#f8614a",
+        "navigationBarTitleText": "西农优选"
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "tabBar": {
+        "color": "#b3b3b3",
+        "selectedColor": "#ff2f3e",
+        "backgroundColor": "#fff",
+        "borderStyle": "black",
+        "position": "bottom",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "/images/tab/home.png",
+                "selectedIconPath": "/images/tab/home@high.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/classify/classify",
+                "iconPath": "/images/tab/classify.png",
+                "selectedIconPath": "/images/tab/classify@high.png",
+                "text": "分类"
+            },
+            {
+                "pagePath": "pages/car/car",
+                "iconPath": "/images/tab/cart.png",
+                "selectedIconPath": "/images/tab/cart@high.png",
+                "text": "购物车"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "iconPath": "/images/tab/user.png",
+                "selectedIconPath": "/images/tab/user@high.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

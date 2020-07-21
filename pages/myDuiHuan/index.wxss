@@ -1,0 +1,11 @@
+.list-view {
+    padding: 30rpx 30rpx;
+    font-size: 26rpx;
+    width: 640rpx;
+    margin: 20rpx auto;
+    background: #eee;
+    border-radius: 10rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

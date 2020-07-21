@@ -1,0 +1,9 @@
+<view class="poverty-recruit-container">
+    <view class="poverty-recruit-inner">
+        <navigator wx:for="{{recruitList}}" wx:key url="/pages/recruitDetail/index?id={{item.list_id}}">
+            <view class="recruit-item">
+                <v-recruit data="{{item}}"></v-recruit>
+            </view>
+        </navigator>
+    </view>
+</view>

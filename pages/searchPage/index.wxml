@@ -1,0 +1,53 @@
+<view class="container">
+    <view class="header">
+        <view class="search-container">
+            <input bindconfirm='goSearch' bindinput="inputChange" placeholder-class="in-bar" placeholder='搜索' value='{{q}}' class='bar' focus='true' />
+            <image class="icon" bindtap="goSearch" src="../images/search-search.png" />
+        </view>
+    </view>
+    <view class="nav">
+        <view bindtap='navShowIndexChange' data-index="0" class="nav-bar {{navShowIndex==0?'active':''}}">产品</view>
+        <view bindtap='navShowIndexChange' data-index="1" class="nav-bar {{navShowIndex==1?'active':''}}">商铺</view>
+    </view>
+    <view class="keyWords-wrapper">
+        <!-- <view class="history">
+            <view class="title">
+                <view class="chunk"></view>
+                <text>历史搜索</text>
+            </view>
+            <view class="wordsList">
+                <block wx:for="{{hotKeyList}}" wx:key>
+                    <text data-word="{{item.name}}" bindtap='goSearch'>{{item.name}}</text>
+                </block>
+
+            </view>
+        </view> -->
+        <!-- <view class="history hot-search">
+            <view class="title">
+                <view class="chunk"></view>
+                <text>最近搜索</text>
+            </view>
+            <view class="wordsList">
+                <block wx:for="{{historyWords}}" wx:key="index">
+                    <text data-word="{{item.keyword}}" bindtap="goSearch">{{item.keyword}}</text>
+                </block>
+            </view>
+        </view> -->
+    </view>
+    <view class="product-list-wrapper" wx:if="{{product.length>0 && navShowIndex==0}}">
+        <block wx:for="{{product}}" wx:key>
+            <v-product-list type="like" class="like-item" data="{{item}}"></v-product-list>
+        </block>
+    </view>
+    <view class="store-list-wrapper" wx:if="{{store.length>0 && navShowIndex==1}}">
+        <block wx:for="{{store}}" wx:key>
+            <v-shop type="like" data="{{item}}"></v-shop>
+        </block>
+    </view>
+    <v-loading-more hidden="{{!moreLoading}}" />
+    <view class="book-list">
+        <view class="no-more-data" style="width:358px" hidden="{{endFlag==1||productList[0].length==0}}">已经加载全部内容了~</view>
+    </view>
+    <text wx:if="{{q && productList[0].length==0}}" class="empty-tip">没有搜索到商品</text>
+    <v-loading wx:if="{{loading}}" />
+</view>

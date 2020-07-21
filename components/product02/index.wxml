@@ -1,0 +1,30 @@
+<navigator hover-class='none' url="/pages/productDetail/index?productId={{data.list_id}}">
+    <view class="product02-wrapper">
+        <view class="inner-container">
+            <view class="product-img">
+                <image  mode="aspectFill" src="{{data.img_url}}"></image>
+            </view>
+            <view class="detail">
+                <view class="twotext bold font28 line-height20">{{data.store_name}}</view>
+                <view style="width:362rpx;" class="line-height20 font24 a62 firsttext">{{data.store_info}}</view>
+                <!-- <view class="tips">满199减60</view> -->
+                <view class="cart1">
+                    <image src='../images/list-cart1.png'></image>
+                    <text class="font20 a96">已售{{data.sales}}件</text>
+                </view>
+                <view class="prize">
+                    <view class="left">
+                        <!-- <view  style="width:66rpx;margin-right:6rpx;" class="tips">促销价</view> -->
+                        <view>
+                            <text class="font24 aff2">￥</text>
+                            <text class="din-bold font44 aff2">{{data.price}}</text>
+                        </view>
+                    </view>
+                    <view class="right">
+                        <image src="../images/list-cart2.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</navigator>

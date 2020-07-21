@@ -1,0 +1,72 @@
+<view class="poverty-rank-container">
+    <view bindtap="toLink" data-item="{{banner}}" class="occupancy-bg">
+        <view class="bg-color"></view>
+        <view class="bg-fff"></view>
+        <view class="activity-banner">
+            <image src="{{banner.img}}"></image>
+        </view>
+    </view>
+    <view class="scroll-wrapper">
+        <view class="poverty-nav">
+            <navigator url="/pages/povertyDynamics/index">
+                <image src="../images/dynamic.png"></image>
+            </navigator>
+            <navigator url="/pages/povertyRecruit/index">
+                <image src="../images/recruit.png"></image>
+            </navigator>
+            <navigator url="/pages/povertyPurchase/index">
+                <image src="../images/unsalable.png"></image>
+            </navigator>
+        </view>
+        <view class="contribution-wrapper">
+            <view class="contribution-img">
+                <image src="../images/contribution-list.png"></image>
+            </view>
+            <view class="rank-table">
+                <view class="table-th">
+                    <view class="th-rank bold ">排名</view>
+                    <view class="th-department bold">部门</view>
+                    <view class="th-contribution bold">贡献值</view>
+                </view>
+                <block wx:for="{{arr1}}" wx:key>
+                    <view class="table-td">
+                        <view class="td-rank" wx:if="{{index+1 > 3}}">{{index+1}}</view>
+                        <view class="rank-img" wx:else>
+                            <image wx:if="{{index+1 === 1}}" src="../images/crown1-icon.png"></image>
+                            <image wx:if="{{index+1 === 2}}" src="../images/crown2-icon.png"></image>
+                            <image wx:if="{{index+1 === 3}}" src="../images/crown3-icon.png"></image>
+                        </view>
+                        <view class="td-department">{{item.bm}}</view>
+                        <view class="td-contribution">{{item.gx}}</view>
+                    </view>
+                </block>
+                <view class="no-more-data" wx:if="{{showMore1 && bm.length>10}}" bindtap="getMore1">查看更多</view>
+            </view>
+        </view>
+        <view class="contribution-wrapper person">
+            <view class="contribution-img">
+                <image src="../images/contribution-person.png"></image>
+            </view>
+            <view class="rank-table">
+                <view class="table-th">
+                    <view class="th-rank bold ">排名</view>
+                    <view class="th-department bold">个人</view>
+                    <view class="th-contribution bold">贡献值</view>
+                </view>
+                <block wx:for="{{arr2}}" wx:key>
+                    <view class="table-td">
+                        <view class="td-rank" wx:if="{{index+1 > 3}}">{{index+1}}</view>
+                        <view class="rank-img" wx:else>
+                            <image wx:if="{{index+1 === 1}}" src="../images/crown1-icon.png"></image>
+                            <image wx:if="{{index+1 === 2}}" src="../images/crown2-icon.png"></image>
+                            <image wx:if="{{index+1 === 3}}" src="../images/crown3-icon.png"></image>
+                        </view>
+                        <view class="td-department">{{item.nickname}}</view>
+                        <view class="td-contribution">{{item.gxz}}</view>
+                    </view>
+                </block>
+                <view class="no-more-data" wx:if="{{showMore2 && gr.length>10}}" bindtap="getMore2">查看更多</view>
+            </view>
+        </view>
+    </view>
+</view>

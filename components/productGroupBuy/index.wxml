@@ -1,0 +1,54 @@
+<view class="product-group-wrapper {{type=='new'?'new-wrapper':type=='time'?'time-wrapper':''}}" bindtap="toDetail">
+    <view class="product-img">
+        <image src="{{data.img_url?data.img_url:data.image_url}}"></image>
+    </view>
+    <view class="product-info">
+        <view class="font28 bold a000">{{data.store_name?data.store_name:data.title}}</view>
+        <view class="font24 a626262 firsttext">{{data.store_info?data.store_info:data.info}}</view>
+        <view class="null" wx:if="{{type=='new'}}"></view>
+        <view class="full-view" wx:elif="{{type=='time'}}">
+            结束时间：{{data.stop_time}}
+        </view>
+        <view class="full" wx:else>
+            <image src="../images/search-fire.png"></image>
+            <view>已拼{{data.sales}}件</view>
+        </view>
+        <view>
+            <text class="font24 a555555" style='margin-right:22rpx;' wx:if="{{type=='new'}}">首发开抢价</text>
+            <text class="aff2 font24" style='margin-right:22rpx;' wx:elif="{{type!='time'}}">{{data.people}}人拼</text>
+            <text class="aff2 font24">￥</text>
+            <text class="din-bold aff2 font44">{{data.price}}</text>
+        </view>
+        <view class="new-fire font22 a7c7c7c" wx:if="{{type=='new'}}">
+            <image class="gray-fire" src="../images/gray-fire.png"></image>
+            <text>火爆抢购中</text>
+        </view>
+        <view class="decoration font24 a969696" wx:else>￥{{data.old_price?data.old_price:data.ot_price}}</view>
+        <view class="tips-black" wx:if="{{type=='new'}}">抢</view>
+         <view class="tips-view font28" wx:elif="{{type=='time'}}">
+            马上抢
+        </view>
+        <view class="tips-view font28" wx:else>
+            马上拼
+        </view>
+        <view class="progress-view-image" wx:if="{{type=='time'}}">
+            <view class="progress cart-color" wx:if="{{data.status == 1}}" data-id="{{data.id}}" catchtap='goDetails'>
+                <view class='bg-red' style="width:20%;"></view>
+                <view class='piece font-color'>仅剩{{data.stock}}件</view>
+            </view>
+            <view class="progress cart-color" wx:elif="{{data.status == 3}}">
+                <view class='bg-red' style="width:0%;"></view>
+                <view class='piece font-color'>未开始</view>
+            </view>
+            <view class="progress cart-color" wx:else>
+                <view class='bg-red' style="width:100%;"></view>
+                <view class='piece font-color'>已抢完</view>
+            </view>
+        </view>
+        <!-- <view class="progress-view" >
+            即将抢光
+            
+        </view> -->
+    </view>
+
+</view>

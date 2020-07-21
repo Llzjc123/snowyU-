@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "活动推送",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "v-normal-product-list": "/components/product02/index"
+    }
+}

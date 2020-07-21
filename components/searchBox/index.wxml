@@ -1,0 +1,7 @@
+<view class="search-container">
+    <view class="input-box" bindtap='goSearch' style="{{hasIcon?'':'margin:0 25rpx'}}">
+        <image src="../images/search-search.png"></image>
+        <image wx:if="{{hasFire}}" class="fire-ico" src="../images/search-fire.png"></image>
+        <text>土蜂蜜</text>
+    </view>
+</view>

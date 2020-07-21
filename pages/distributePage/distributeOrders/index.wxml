@@ -1,0 +1,7 @@
+<view class="distribute-order-container">
+    <block wx:for="{{orderList}}" wx:key>
+        <view class="order-list">
+            <v-distribute-list type="{{type}}" data="{{item}}"></v-distribute-list>
+        </view>
+    </block>
+</view>

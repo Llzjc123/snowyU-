@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "退款/售后",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "v-loading-more": "/components/moredLoading/index",
+        "v-loading": "/components/loading/index"
+    }
+}

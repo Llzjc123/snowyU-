@@ -1,0 +1,16 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="input-section">
+        <view class="section__title">快递单号：</view>
+        <input name="code" placeholder="请输入快递单号" />
+    </view>
+    <view class="select-section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range-key="name" range="{{wuliuCompany}}">
+            <view class="picker">
+                物流公司：{{wuliuCompany[index].name?wuliuCompany[index].name:'请选择物流公司'}}
+            </view>
+        </picker>
+    </view>
+    <view class="btn-area">
+        <button form-type="submit">确认发货</button>
+    </view>
+</form>

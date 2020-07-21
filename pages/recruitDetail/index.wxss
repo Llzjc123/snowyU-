@@ -1,0 +1,116 @@
+.recruit-detail-container {
+    width: 690rpx;
+    padding: 0 30rpx;
+}
+
+.recruit-detail-container .detail-top {
+    width: 690rpx;
+    /* height: 234rpx; */
+    border-radius: 8rpx;
+    /* box-shadow: 0rpx 2rpx 10rpx #eee; */
+    margin-top: 10rpx;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.recruit-detail-container  .top-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recruit-detail-container .position {
+    font-size: 38rpx;
+    font-weight: bold;
+    line-height: 96rpx;
+}
+
+.recruit-detail-container .date {
+    color: #646464;
+    font-size: 20rpx;
+    position: relative;
+    top: 34rpx;
+}
+
+.recruit-detail-container .salary {
+    color: #f8614a;
+    font-size: 24rpx;
+    font-weight: bold;
+    line-height: 56rpx;
+}
+
+.recruit-detail-container  .basic-require {
+    display: flex;
+    color: #646464;
+    font-size: 22rpx;
+    line-height: 70rpx;
+}
+
+.basic-require view {
+    margin-right: 30rpx;
+}
+
+.recruit-detail-container .icon {
+    margin-right: 16rpx;
+    position: relative;
+    top: 4rpx;
+}
+
+.recruit-detail-container .enterprise-info {
+    margin-top: 48rpx;
+    width: 690rpx;
+    color: #646464;
+    font-size: 30rpx;
+}
+
+.enterprise-info .top-enterprise {
+    display: flex;
+    line-height: 55rpx;
+}
+
+.enterprise-info .mar-left22 {
+    margin-left: 22rpx;
+}
+
+.enterprise-info .company-type {
+    color: #8c8c8c;
+    line-height: 70rpx;
+}
+
+.recruit-detail-container .info-describe {
+    width: 690rpx;
+    color: #4d4d4d;
+    margin-top: 10rpx;
+    line-height: 48rpx;
+}
+
+.enterprise-info .contact-info {
+    margin-top: 12rpx;
+    line-height: 50rpx;
+}
+
+.recruit-detail-container .job-describe {
+    margin-top: 34rpx;
+    width: 690rpx;
+}
+
+.job-describe .position-des {
+    line-height: 94rpx;
+}
+
+.responsibility, .specific {
+    line-height: 48rpx;
+}
+
+.recruit-detail-container .reminder {
+    width: 690rpx;
+    margin-top: 40rpx;
+}
+
+.recruit-detail-container .reminder-title {
+    line-height: 95rpx;
+}
+
+.recruit-detail-container .specific-reminder {
+    line-height: 48rpx;
+    margin-bottom: 82rpx;
+}

@@ -1,0 +1,130 @@
+.activity-container {
+    width: 100%;
+}
+
+.activity-container .occupancy-bg {
+    position: absolute;
+    height: 90rpx;
+    width: 100%;
+}
+
+.activity-container .bg-color {
+    background: #f8614a;
+    height: 90rpx;
+    width: 100%;
+}
+
+.activity-container .bg-fff {
+    width: 100%;
+    height: 210rpx;
+}
+
+.activity-banner {
+    width: 710rpx;
+    height: 300rpx;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.activity-banner image {
+    width: 100%;
+    height: 100%;
+}
+
+.activity-title {
+    height: 116rpx;
+    line-height: 116rpx;
+    text-align: center;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.activity-list .activity-item {
+    width: 100%;
+    height: 324rpx;
+    padding: 20rpx 15rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.activity-list .activity-item:last-child {
+    padding-bottom: 0;
+}
+
+.activity-item .activity-left {
+    width: 287rpx;
+    height: 283rpx;
+}
+
+.activity-item .activity-left image {
+    width: 100%;
+    height: 100%;
+}
+
+.activity-item .activity-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 36rpx;
+    border-bottom: 1rpx solid #eee;
+}
+
+.activity-right .product-name {
+    font-size: 26rpx;
+    font-weight: bold;
+    line-height: 48rpx;
+}
+
+.activity-right .product-info {
+    color: #626262;
+    font-size: 22rpx;
+    line-height: 34rpx;
+    width: 356rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.item-span {
+    font-size: 20rpx;
+    color: #ff2f3e;
+    background: #fff0f0;
+    padding: 6rpx 12rpx;
+    width: 150rpx;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 10rpx;
+}
+
+.activity-right .span-img {
+    width: 18rpx;
+    height: 27rpx;
+    margin-right: 10rpx;
+}
+
+.activity-right .span-img image {
+    width: 100%;
+    height: 100%;
+}
+
+.activity-right .right-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10rpx;
+}
+
+.activity-right .bottom-right {
+    /* width: 144rpx;
+  height: 96rpx; */
+}
+
+.activity-right .bottom-right image {
+    width: 100%;
+    height: 100%;
+}

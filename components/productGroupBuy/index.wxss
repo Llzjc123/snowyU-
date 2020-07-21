@@ -1,0 +1,200 @@
+@import "../common.wxss";
+
+.product-group-wrapper {
+    width: 100%;
+    height: 320rpx;
+    display: flex;
+    align-items: center;
+    margin-bottom: 6rpx;
+}
+
+.new-wrapper {
+    height: 214rpx;
+    margin-top: 40rpx;
+    margin-bottom: 20rpx;
+}
+
+.product-group-wrapper .product-img {
+    width: 320rpx;
+    height: 320rpx;
+}
+
+.new-wrapper .product-img {
+    width: 214rpx;
+    height: 214rpx;
+    background: #f5f5f5;
+    margin-left: 30rpx;
+}
+
+.time-wrapper .product-img {
+    width: 249rpx;
+    height: 249rpx;
+    margin-left: 30rpx;
+}
+
+.product-group-wrapper .product-img image {
+    width: 100%;
+    height: 100%;
+    border-radius: 6rpx;
+}
+
+.font-color {
+    color: #fc4141 !important;
+}
+
+.product-group-wrapper .product-info {
+    height: 280rpx;
+    margin-left: 24rpx;
+    padding: 26rpx 0;
+    padding-top: 10rpx;
+    width: 382rpx;
+    flex-direction: column;
+    display: inline-flex;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 1rpx solid #eee;
+}
+
+.new-wrapper  .product-info {
+    width: 450rpx;
+    height: 214rpx;
+    border: none;
+}
+
+.time-wrapper  .product-info {
+    width: 410rpx;
+    height: 250rpx;
+    border: none;
+    padding: 0;
+}
+
+.product-group-wrapper .product-info .full {
+    width: 160rpx;
+    height: 38rpx;
+    color: #ff2f3e;
+    font-size: 24rpx;
+    border-radius: 6rpx;
+    background: #fff0f0;
+    text-align: center;
+    margin-bottom: 50rpx;
+    display: flex;
+    align-items: center;
+}
+
+.time-wrapper .product-info .full-view {
+    max-width: 340rpx;
+    /* padding: 0 10rpx; *//* height: 58rpx; */
+    color: #ff2f3e;
+    font-size: 26rpx;
+    border-radius: 6rpx;
+    text-align: left;
+    margin-bottom: 30rpx;
+    /* border: 2rpx solid #ff2f3e; */
+    background: #fff;
+}
+
+.product-group-wrapper .product-info .null {
+    height: 50rpx;
+}
+
+.product-group-wrapper .product-info .full image {
+    width: 18rpx;
+    height: 26rpx;
+    margin: 0 12rpx;
+}
+
+.product-group-wrapper .product-info .tips-view {
+    width: 124rpx;
+    height: 62rpx;
+    line-height: 62rpx;
+    position: absolute;
+    background: #ff2f3e;
+    bottom: 26rpx;
+    right: 0;
+    border-radius: 50rpx;
+    color: #fff;
+    text-align: center;
+}
+
+.time-wrapper .product-info .tips-view {
+    bottom: 46rpx;
+    width: 170rpx;
+}
+
+.time-wrapper .product-info  .progress-view {
+    width: 140rpx;
+    height: 26rpx;
+    line-height: 26rpx;
+    position: absolute;
+    background: #ff2f3e;
+    bottom: 0rpx;
+    right: 0;
+    border-radius: 50rpx;
+    color: #fff;
+    padding: 0 10rpx;
+    font-size: 20rpx;
+}
+
+.time-wrapper .product-info  .progress-view-image {
+    position: absolute;
+    bottom: 0rpx;
+    right: 0;
+    width: 250rpx;
+    height: 26rpx;
+}
+
+.time-wrapper .product-info .progress-view-image .progress {
+    overflow: hidden;
+    background-color: #fff;
+    width: 250rpx;
+    border-radius: 20rpx;
+    height: 26rpx;
+    position: relative;
+    text-align: center;
+}
+
+.time-wrapper .product-info .progress-view-image .progress .bg-red {
+    width: 0;
+    height: 100%;
+    transition: width 0.6s ease;
+    background-color: #ffe3e1;
+}
+
+.time-wrapper .product-info .progress-view-image .progress .piece {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 49%;
+    font-size: 22rpx;
+}
+
+.cart-color {
+    color: #ff3700 !important;
+    border: 1px solid #ff3700 !important;
+}
+
+.product-group-wrapper .product-info .tips-black {
+    height: 58rpx;
+    width: 58rpx;
+    line-height: 58rpx;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 26rpx;
+    right: 0;
+    background: #353535;
+    color: #fff;
+    font-size: 30rpx;
+    font-weight: bold;
+    text-align: center;
+}
+
+.product-group-wrapper .product-info .new-fire {
+    display: flex;
+    align-items: center;
+}
+
+.product-group-wrapper .product-info .gray-fire {
+    width: 18rpx;
+    height: 28rpx;
+    margin-right: 10rpx;
+}

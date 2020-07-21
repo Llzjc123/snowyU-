@@ -1,0 +1,16 @@
+<view class="container">
+
+    <view class="logo">
+        <image src="../../pages/images/logo.png"></image>
+    </view>
+    <view class="icon">
+        <image src="../../pages/images/icon.png"></image>
+    </view>
+    <view class="login-btn">
+        <button plain='{{true}}' open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    </view>
+    <view class="login-btn" style="margin-top:20rpx;">
+        <button plain='{{true}}' bindtap="cancel">拒绝</button>
+    </view>
+    <view class="tips-text">同意微信授权, 查看更多内容</view>
+</view>

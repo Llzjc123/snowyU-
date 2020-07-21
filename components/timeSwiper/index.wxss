@@ -1,0 +1,48 @@
+.category-container {
+    width: 100%;
+    height: 116rpx;
+    background: #ff2f3e;
+}
+
+.category-scroll {
+    height: 100%;
+    width: 100%;
+}
+
+.category-scroll-wrapper {
+    overflow: hidden;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.category {
+    display: inline-flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 22rpx;
+    color:#fff;
+    opacity: 0.6;
+}
+
+.category .box {
+    height: 48rpx;
+    font-size: 32rpx;
+    font-weight:bold;
+}
+
+.category .text {
+    height: 30rpx;
+    line-height:30rpx;
+    font-size:24rpx;
+    
+}
+
+.category:last-child view {
+    margin-right: 24rpx;
+}
+
+.hight {
+    opacity: 1;
+}

@@ -1,0 +1,55 @@
+@import "../common.wxss";
+
+.product-swiper {
+    height: 488rpx;
+    width: 690rpx;
+    margin: 0 auto 20rpx;
+    border-radius: 16rpx;
+    overflow: hidden;
+    background: #fff;
+}
+
+.product-swiper .title-view {
+    width: 100%;
+    height: 120rpx;
+    background: #f7babe;
+}
+
+.product-swiper .title {
+    height: 84rpx;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding-left: 24rpx;
+}
+
+.product-swiper .title .line {
+    height: 30rpx;
+    width: 1rpx;
+    background: #fff;
+    margin: 0 20rpx;
+}
+
+.product-swiper .product-view {
+    width: 690rpx;
+    height: 400rpx;
+    position: relative;
+    top: -36rpx;
+    border-top-left-radius: 40rpx;
+    border-top-right-radius: 40rpx;
+    z-index: 999;
+    background: #fff;
+    display: flex;
+    overflow: hidden;
+}
+
+.product-swiper .product-view  .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.product-swiper .product-list-view {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}

@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "店铺",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "v-product-list": "/components/product03/index"
+    }
+}

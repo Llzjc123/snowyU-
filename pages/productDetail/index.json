@@ -1,0 +1,9 @@
+{
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "产品详情",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "v-product-memment": "/components/productMement/index"
+    }
+}

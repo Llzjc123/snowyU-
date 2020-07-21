@@ -1,0 +1,296 @@
+<import src="/wxParse/wxParse.wxml" />
+<view class='swiper_banner'>
+    <swiper class="swiper-box" indicator-dots="{{true}}" autoplay="{{false}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#fff" indicator-active-color="#ff2f3e">
+        <block wx:if="{{productDetail.video}}">
+            <swiper-item>
+                <video src="{{productDetail.video}}" controls></video>
+            </swiper-item>
+        </block>
+        <swiper-item wx:for="{{productDetail.slider_image}}" wx:key>
+            <image mode="aspectFill" src="{{item}}" class="slide-image" />
+        </swiper-item>
+
+    </swiper>
+</view>
+<view class='countdown-wrapper3 flex' wx:if="{{isYuShow}}">
+
+    <view class='price-txt flex'>
+        <image class='yu-show-ico' src="../images/yu-show-ico.png"></image>
+        <view class='number'>
+            <text>￥</text>{{productDetail.price}}</view>
+        <!-- <view class='old-number'>￥{{productDetail.ot_price}}</view> -->
+    </view>
+    <view class='right-wrapper flex'>
+        <!-- <view class='title'>预售时间：</view> -->
+        <view class='countdown-time'>
+            {{yuShowTime}}
+        </view>
+    </view>
+</view>
+<view class='countdown-wrapper flex' wx:if="{{isTuan}}">
+    <view class='tuan-people'>
+        <image src="../images/product-detail-tuan-bg.png"></image>
+        <view class="text firsttext">{{productDetail.people}}人拼团</view>
+    </view>
+    <view class='prize'>
+        <text class="font26">￥</text>
+        <text class="din-bold font46">{{productDetail.price}}</text>
+    </view>
+    <view class='font22 decoration' style="color:#ffbaa5;height:14rpx;">
+        ￥{{productDetail.old_price}}
+    </view>
+</view>
+<view class='countdown-wrapper2 flex' wx:elif="{{isMiao}}">
+    <view class='price-txt flex'>
+        <view class='number'>
+            <text>￥</text>{{productDetail.price}}</view>
+        <view class='old-number'>￥{{productDetail.ot_price}}</view>
+    </view>
+    <view class='right-wrapper flex'>
+        <view class='title'>距秒杀结束仅剩</view>
+        <view class='countdown-time'>
+            <text class='num'>{{countDownHour}}</text>：
+            <text class='num'>{{countDownMinute}}</text>：
+            <text class='num'>{{countDownSecond}}</text>
+        </view>
+    </view>
+</view>
+<view class='pro-wrapper'>
+    <view class='pro-infos'>
+        <view class='price-view flex'>
+            <view class="price flex" wx:if="{{!isMiao && !isTuan && !isYuShow}}">
+                <view class="font26 aff2">￥</view>
+                <view class="din-bold font46 aff2">{{productDetail.price}}</view>
+                <view class="font22 a666 decoration" style='margin-left:16rpx'>
+                    ￥{{productDetail.ot_price}}
+                </view>
+            </view>
+            <view wx:else class='font32 a333 twotext bold'>{{productDetail.store_name}}</view>
+            <view class="btn">
+                <view class="btn-item" bindtap='collect' wx:if="{{!isMiao && !isTuan}}">
+                    <image src="../images/detail-collect{{collect?'-active':''}}.png"></image>
+                    <view class="font22 a666">收藏</view>
+                </view>
+                <view class="btn-item" bindtap="listenerActionSheet">
+                    <image src="../images/detail-share.png"></image>
+                    <view class="font22 a666">分享</view>
+                </view>
+            </view>
+        </view>
+        <view class='price-wrapper font32 a333 twotext' wx:if="{{!isMiao && !isTuan && !isYuShow}}">{{productDetail.store_name}}</view>
+        <view class="font24 a666">{{productDetail.info}}</view>
+        <view class="flex acea-row.row-between">
+            <view class="price-wrapper font24 a666">已售：{{productDetail.sales}}件</view>
+            <view class="price-wrapper font24 a666">运费：{{productDetail.postage}}</view>
+        </view>
+    </view>
+    <view class='coupon-wrapper' bindtap='toCoupon' wx:if="{{couponList.length>0 &&!isMiao && !isTuan}}">
+        <text class='a333 font28' style="width:100rpx;margin-top:6rpx;">优惠券</text>
+        <view style='flex:1'>
+            <view wx:for="{{couponList}}" wx:key class="coupon-list firsttext">
+                <view class="full">满减</view>
+                <view class="firsttext">{{item.title}}</view>
+            </view>
+        </view>
+        <view class="arrow-view">
+            <image src="../images/detail-arrow.png">
+            </image>
+        </view>
+    </view>
+    <view class="product-attr-view" bindtap='selectAttr' wx:if="{{!isTuan && !isMiao}}">
+        <view class="flex font28 a333 firsttext">
+            <view style="width:60rpx">{{attr}}</view>
+            <view class="firsttext" style='margin-left:20rpx;flex:1'>{{attrValue}}</view>
+            <view class="arrow-view">
+                <image src="../images/detail-arrow.png"></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="tuan-wrapper" wx:if="{{isTuan}}">
+    <view class='assemble' wx:if="{{pinklist}}">
+        <view class='item acea-row row-between-wrapper' wx:for='1' wx:key>
+            <view class='pictxt acea-row row-between-wrapper'>
+                <view class='pictrue'>
+                    <image src='{{pinklist.avatar}}'></image>
+                </view>
+                <view class='text line1'>{{pinklist.nickname}}</view>
+            </view>
+            <view class='right acea-row row-middle'>
+                <view>
+                    <view class='lack'>还差
+                        <text class='font-color'>{{pinklist.lackpeople}}</text>人成团</view>
+                    <!-- <view class='time'>剩余 {{item.time.hou}}:{{item.time.min}}:{{item.time.sec}}</view> -->
+                </view>
+                <navigator hover-class='none' url='/pages/productTuanDetail/index?id={{pinklist.pink_id}}' class='spellBnt'>去拼单
+                    <text class='iconfont icon-jiantou'></text>
+                </navigator>
+            </view>
+        </view>
+        <view class='more' bindtap='showAll' wx:if="{{pink.length >= AllIndex}}">查看更多
+            <text class='iconfont icon-xiangxia'></text>
+        </view>
+        <view class='more' bindtap='hideAll' wx:elif="{{pink.length >= AllIndex && !pink.length}}">收起
+            <text class='iconfont icon-xiangxia'></text>
+        </view>
+    </view>
+    <view class='playWay'>
+        <view class='title acea-row row-between-wrapper'>
+            <view>拼团玩法</view>
+        </view>
+        <view class='way acea-row row-middle'>
+            <view class='item'>
+                <text class='num'>①</text>开团/参团</view>
+            <image class='iconfont icon-arrow' src="../images/arrow-right.png"></image>
+            <view class='item'>
+                <text class='num'>②</text>邀请好友</view>
+
+            <image class='iconfont icon-arrow' src="../images/arrow-right.png"></image>
+
+            <view class='item'>
+                <view>
+                    <text class='num'>③</text>满员发货</view>
+                <!-- <view class='tip'>不满自动退款</view> -->
+            </view>
+        </view>
+    </view>
+</view>
+<navigator hover-class="none" url="/pages/shopPage/index?id={{productDetail.mer_id}}" class="store-wrapper" wx:if="{{storeInfo}}">
+    <image class="store-logo" src="{{storeInfo.store_imgUrl}}"></image>
+    <view class="store-info">
+        <view class="font34 a333 firsttext">{{storeInfo.shop_name}}</view>
+        <view class="a666 font24 firsttext">{{storeInfo.store_report}}</view>
+    </view>
+    <image bindtap="callPhone" class="store-phone" src="../images/store-phone.png"></image>
+</navigator>
+<view class="detail-tab">
+    <view class="tab-item" data-index="0" bindtap="changeTabActive">
+        <view class="title">
+            <view style='z-index:1'>商品详情</view>
+            <view class="line" wx:if="{{tabActive==0}}"></view>
+        </view>
+    </view>
+    <view class="tab-item" data-index="1" bindtap="changeTabActive">
+        <view class="title">
+            <view style='z-index:1'>商品评价</view>
+            <view class="line" wx:if="{{tabActive==1}}"></view>
+        </view>
+    </view>
+</view>
+<view class='evaluate-wrapper' wx:if="{{tabActive==1}}">
+    <v-product-memment commentList="{{commentList}}" wx:if="{{commentList.length>0}}"></v-product-memment>
+    <view class="no-more-data" wx:else>暂无评价</view>
+</view>
+<view class='content-wrapper' wx:if="{{tabActive==0}}">
+    <template is="wxParse" data="{{wxParseData:description.nodes}}" />
+</view>
+<view style='height:100rpx;'></view>
+<view class='foot'>
+    <!-- <view class="foot-tuan flex">111</view> -->
+    <view class="foot-view flex">
+        <view class='fn-btns flex'>
+            <view bindtap="toShop" data-id="{{productDetail.mer_id}}" class='item item-car'>
+                <view class='iconfont'>
+                    <image class='icon-car' src="../images/detail-store.png"></image>
+                </view>
+                <text class="font22 a666">店铺</text>
+            </view>
+            <button open-type="contact" class='item item-kefu' wx:if="{{productDetail.mer_id==0}}">
+                <image class='icon-kefu' src="../images/detail-kefu.png"></image>
+                <text class="font22 a666" style='margin-top:3rpx;'>客服</text>
+            </button>
+            <view wx:else class='item item-kefu' bindtap="callPhone">
+                <image class='icon-kefu' src="../images/detail-kefu.png"></image>
+                <text class="font22 a666" style='margin-top:3rpx;'>客服</text>
+            </view>
+
+        </view>
+        <view class='btns-wrapper flex {{isMiao || isTuan?"btnmiaos-wrapper":" "}}'>
+            <view class='view buy-btn' bindtap='parameterShow' wx:if="{{!isMiao && !isTuan}}">
+                <view wx:if="{{isTuan}}" class="tuan-btn">
+                    <view class="prize">
+                        <text class="font24">￥</text>
+                        <text class="font30">{{productDetail.old_price}}</text>
+                    </view>
+                    <view class="font28">单独购买</view>
+                </view>
+                <text wx:else>加入购物车</text>
+            </view>
+            <view class='view payment-btn {{isMiao || isTuan?"paymiao-btn":" "}}' bindtap='goOrder'>
+                <view wx:if="{{isTuan}}" class="tuan-btn">
+                    <view class="prize">
+                        <text>￥</text>
+                        <text>{{productDetail.price}}</text>
+                    </view>
+                    <view class="font28">立即开团</view>
+                </view>
+                <text wx:else>立即购买</text>
+            </view>
+        </view>
+    </view>
+
+</view>
+<view class="model-bg {{show==true ? 'show':''}} {{prostatus==true ? 'show':''}}" bindtap='modelbg'></view>
+<view class="model-proinfo {{prostatus==true ? 'show':''}}">
+    <view class='hd-wrapper'>
+        <image src='{{productSelect.img_url?productSelect.img_url:productSelect.image}}'></image>
+        <view class='txt-info'>
+            <view class='title'>{{productDetail.store_name}}</view>
+            <view class='num flex'>
+                <view class='price'>￥{{productSelect.price}}</view>
+                <view class='stock'>库存：{{productSelect.stock}}{{productDetail.unit_name}}</view>
+            </view>
+        </view>
+    </view>
+    <view class='bd-wrapper'>
+        <block wx:for="{{productAttr}}" wx:key="key" wx:for-index="fatherIndex">
+            <view class='parameter-item'>
+                <view class='title-bar'>{{item.attr_name}}</view>
+                <view class='item-wrapper'>
+                    <block wx:for="{{item.attr_values}}" wx:for-index="index" wx:key="key" wx:for-item="items">
+                        <view data-key="{{items.val}}" data-index="{{index}}" data-fatherindex="{{fatherIndex}}" data-name="{{item.attr_name}}" class='item {{items.check?"sizecolor":""}}' bindtap='tapsize'>{{items.val}}</view>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class='count-box flex'>
+        购买数量
+        <view class='count-wrappers flex'>
+            <text data-index="{{index}}" bindtap="bindMinus" class='{{minusStatus}}'>-</text>
+            <input class='num' type="number" value='{{num}}' bindblur='setNumber' />
+            <text class='add' data-index="{{index}}" bindtap="bindPlus">+</text>
+        </view>
+    </view>
+    <view style='height:100rpx;'></view>
+    <button class='foot-wrapper' bindtap='subBuy'>确定</button>
+</view>
+<view class='mask' wx:if="{{prostatus}}" bindtap='modelbg'></view>
+<!-- 分享按钮 -->
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet" class='pro-wrapper' hover-class='none'>
+    <action-sheet-item hover-class='none'>
+        <button open-type="share" class='contact' hover-class='none'>
+            <view class='iconn'></view>
+            发送给朋友
+        </button>
+        <button class='contact' bindtap='goPoster' hover-class='none'>
+            <view class='iconn iconn1'></view>
+            生成海报
+        </button>
+    </action-sheet-item>
+</action-sheet>
+<!-- 分享 S -->
+<view class="share-cover" wx:if="{{showSharePic}}" catchtouchmove='true'>
+    <view class="share-pic-box">
+        <view class="share-pic">
+            <image src="{{sharePicUrl}}" class="sharePic"></image>
+        </view>
+        <button class="share-tips" catchtap='savePic'>保存图片</button>
+        <view class="close-share" catchtap='closeShare'></view>
+    </view>
+</view>
+<!-- 分享 E -->
+
+<!-- canvas S -->
+<canvas canvas-id="shareFrends" class="canvas"></canvas>
+<!-- canvas E -->

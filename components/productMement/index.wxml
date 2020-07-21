@@ -1,0 +1,34 @@
+<view class="comment">
+    <!-- <view class='comment-header'>
+        <text data-index='1' class='{{comm == 1?"comment-on":""}}' bindtap='commentap'>全部({{alllength}})</text>
+        <text data-index='2' class='{{comm == 2?"comment-on":""}}' bindtap='commentap'>最新({{newlength}})</text>
+        <text data-index='3' class='{{comm == 3?"comment-on":""}}' bindtap='commentap'>有图({{piclength}})</text>
+       <text data-index='4' class='header-cha {{comm == 4?"comment-on":""}}' bindtap='commentap'>差评(2)</text>
+    </view> -->
+    <view class='comment-ul'>
+
+        <view class='comment-li' wx:for="{{commentList}}" wx:key>
+            <view class='li-view1'>
+                <image src='{{item.headimgurl}}' class='li-pic li-title'></image>
+                <text class='li-title'>{{item.nickname}}</text>
+                <view class='start star{{item.product_score}} li-title'></view>
+            </view>
+            <view class='li-text'>{{item.comment}}</view>
+            <view class='flex flex-pic'>
+                <block wx:for="{{item.pics}}" wx:key wx:for-item="items">
+                    <image src='{{items}}' class='li-pic2' bindtap='getImagePreview' data-image="{{items}}" data-images="{{item.pics}}"></image>
+                </block>
+            </view>
+            <view class='li-time'>
+                <text>{{item.add_time}}</text>
+            </view>
+            <view wx:if="{{item.reply_content}}" class="reply-content">
+                <view class='li-text'>
+                    回复：{{item.reply_content}}
+                </view>
+                <view class='li-time'>回复时间：{{item.reply_time}}</view>
+            </view>
+        </view>
+
+    </view>
+</view>

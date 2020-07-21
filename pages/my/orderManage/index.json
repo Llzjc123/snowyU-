@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "商家中心",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "v-order-manage": "/components/orderManage/index"
+    }
+}

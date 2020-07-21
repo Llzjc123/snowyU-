@@ -1,0 +1,27 @@
+<wxs src="../../utils/filter.wxs" module="util" />
+<view class="shop-container">
+    <navigator class="shop-top" hover-class="none" url="/pages/shopPage/index?id={{data.mer_id}}">
+        <view class="shop-top-left">
+            <view class="shop-img">
+                <image src="{{ data.store_imgUrl }}"></image>
+            </view>
+            <view class="title">
+                <view class="name firsttext">{{ data.shop_name }}</view>
+                <view class="info firsttext">{{ data.store_report }}</view>
+            </view>
+        </view>
+        <view class="shop-top-right">
+            <image src="../images/go-shop.png"></image>
+        </view>
+    </navigator>
+    <view class="{{ type === 'small' ? 'shop-bottom' : 'shop-bottom1'}}">
+        <!-- <block wx:for="{{util.formJson(data.record_imgUrl?data.record_imgUrl:data.recode_imgUrl)}}" wx:key>
+            <image src="{{ item }}"></image>
+        </block> -->
+        <block wx:for="{{data.goods?data.goods:data.product}}" wx:key>
+            <navigator hover-class='none' url="/pages/productDetail/index?productId={{item.list_id?item.list_id:item.id}}">
+                <image  mode="aspectFill" src="{{ item.image }}"></image>
+            </navigator>
+        </block>
+    </view>
+</view>

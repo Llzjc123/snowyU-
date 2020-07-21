@@ -1,0 +1,25 @@
+<import src="/wxParse/wxParse.wxml" />
+<view class="poverty-activity-container">
+    <view class="activity-info">
+        <view class="activity-top">
+            <view class="head-img">
+                <image wx:if="{{newsInfo.avatar}}" src="{{newsInfo.avatar}}" style="width:54rpx;height:54rpx;margin-right: 16rpx;border-radius: 50%;"></image>
+                <image wx:else src="../images/head-portrait.png" style="width:54rpx;height:54rpx;margin-right: 16rpx;border-radius: 50%;"></image>
+            </view>
+            <view class="font22 bold">{{newsInfo.author}}</view>
+        </view>
+        <view class="font22" style="line-height:50rpx;">{{newsInfo.add_time}}</view>
+        <view class="activity-title font30">{{newsInfo.title}}</view>
+        <view class='content-wrapper'>
+            <template wx:if="{{!type}}" is="wxParse" data="{{wxParseData:content.nodes}}" />
+            <image style="width:500rpx;margin:50rpx 0;" mode="aspectFill" wx:if="{{newsInfo.url}}" src="{{newsInfo.url}}"></image>
+        </view>
+    </view>
+    <view class="activity-product">
+        <view class="activity-list">
+            <view class="activity-item" wx:for="{{productList}}" wx:key wx:if="{{productList}}">
+                <v-normal-product-list data="{{item}}"></v-normal-product-list>
+            </view>
+        </view>
+    </view>
+</view>

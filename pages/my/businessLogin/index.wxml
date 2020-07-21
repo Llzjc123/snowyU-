@@ -1,0 +1,35 @@
+<view class="business-login-container" wx:if="{{!isLogin}}">
+    <view class="business-info">
+        <view class="business-img" style="margin-top:58rpx;">
+            <image src="../../images/team-protrait.jpg"></image>
+        </view>
+        <view class="font30 afff line66">商家中心</view>
+    </view>
+    <view class="login-box">
+        <form bindsubmit="formSubmit">
+            <view style="position:relative;">
+                <input class="input-login input-tel" name="account" placeholder='请输入账号' placeholder-class='placeholder' maxlength="11"></input>
+                <image src="../../images/user-icon.png" class="user-icon"></image>
+            </view>
+            <view style="position:relative;">
+                <input class="input-login input-pwd" password="{{true}}" name="password" placeholder='请输入密码' placeholder-class='placeholder'></input>
+                <image src="../../images/pwd-icon.png" class="pwd-icon"></image>
+            </view>
+            <view class="login-tips" wx:if="{{!true}}"> 请输入正确的用户名、密码</view>
+            <!-- <view class="miss-pwd font24">忘记密码？</view> -->
+            <button class="login-btn font36" form-type="submit">登录</button>
+        </form>
+    </view>
+</view>
+
+
+<view class="business-center-container" wx:else>
+    <navigator url="/pages/my/orderManage/index">
+        <view class="center-list">
+            <view class="center-left font30">订单管理</view>
+            <image src="../../images/arrow-right2.png" style="width:12rpx;height:18rpx;margin-right:20rpx;"></image>
+        </view>
+    </navigator>
+
+    <button class="quitLogin-btn font36" bindtap="quitLogin">退出登录</button>
+</view>

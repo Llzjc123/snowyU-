@@ -1,0 +1,24 @@
+<view class="container">
+    <!-- <v-nav-list data="{{navList}}" class="classify-nav-wrapper"></v-nav-list> -->
+    <view class="classify-container">
+        <scroll-view scroll-x style='width:auto;overflow:hidden;' class="scroll-height">
+            <block wx:for="{{navList}}" wx:key>
+                <view class="item {{ activeItem === index ? 'activeFont' : ''}}" bindtap="onNavChange" data-index="{{index}}">
+                    {{ item }}
+                    <view class="active-line" wx:if="{{ activeItem === index }}"></view>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <block wx:if="{{!loading}}">
+        <v-all-product bindnavOneTap="changeNavOneTap" data="{{productCategory}}" activeId="{{activeId}}" wx:if="{{activeItem === 0}}" goodsList="{{goodsList}}"></v-all-product>
+        <v-all-product bindnavOneTap="changeNavOneTap" data="{{productCategory}}" activeId="{{activeId}}" wx:if="{{activeItem === 1}}" goodsList="{{goodsList}}"></v-all-product>
+        <v-town bindtownNavOneTap="townNavOneTap" data="{{storeList}}" activeId="{{townActiveId}}" category="{{storeCategory}}" wx:if="{{activeItem === 2}}"></v-town>
+        <v-enterprise data="{{storeList}}" wx:if="{{activeItem === 3}}"></v-enterprise>
+        <v-enterprise data="{{storeList}}" wx:if="{{activeItem === 4}}"></v-enterprise>
+    </block>
+    <block>
+        <v-loading wx:if="{{loading}}" />
+    </block>
+
+</view>

@@ -1,0 +1,79 @@
+<view class='menu flex'>
+    <view class='item {{nowstatus == "0" ? "on" : ""}}' data-show="0" bindtap="statusClick">全部</view>
+    <view class='item {{nowstatus == "1" ? "on" : ""}}' data-show="1" bindtap="statusClick">待付款</view>
+    <view class='item {{nowstatus == "2" ? "on" : ""}}' data-show="2" bindtap="statusClick">待发货</view>
+    <view class='item {{nowstatus == "3" ? "on" : ""}}' data-show="3" bindtap="statusClick">待收货</view>
+    <view class='item {{nowstatus == "4" ? "on" : ""}}' data-show="4" bindtap="statusClick">待评价</view>
+</view>
+<v-loading wx:if="{{loading}}" />
+<view wx:elif="{{orderlist.length==0||orderlist[0].length==0}}" class="no-more-data">您还没有相关订单</view>
+<view class='orders-list' wx:else>
+    <block wx:for="{{orderlist}}" wx:key="key">
+        <block wx:for="{{item}}" wx:key="key" wx:for-item="fItem">
+            <view class='items'>
+                <view class='pay-status flex'>
+                    <view class="font26 bold">{{fItem.store?fItem.store:'商城'}}
+                        <image src="../images/arrow-right2.png" style="width:10rpx;height:15rpx;margin-left:12rpx;"></image>
+                    </view>
+                    <view class='left-wrapper'>
+                        <view wx:if="{{fItem.paid == 0}}" class='status-txt'>待付款
+                        </view>
+                        <view wx:elif="{{fItem.paid && fItem.status == 0}}" class='status-txt'>待发货
+                        </view>
+                        <view wx:elif="{{fItem.paid && fItem.status == 1}}" class='status-txt'>卖家已发货
+                        </view>
+                        <view wx:elif="{{fItem.paid && fItem.status == 2}}" class='status-txt'>交易成功
+                        </view>
+
+                        <view wx:elif="{{fItem.paid && fItem.status == 4}}" class='status-txt'>已完成
+                        </view>
+                        <view wx:elif="{{fItem.paid && fItem.status <0 && fItem.refund_status==1 }}" class='status-txt'>退款申请中
+                        </view>
+
+                        <view wx:elif="{{fItem.paid && fItem.status <0 && fItem.refund_status==2 }}" class='status-txt'>已退款
+                        </view>
+                    </view>
+                </view>
+                <navigator hover-class="none" url='/pages/orderDetail/index?type={{nowstatus}}&order_id={{fItem.list_id}}' class='info-list'>
+                    <block wx:for="{{fItem.goodslist}}" wx:key="key">
+                        <view class='pro-item flex'>
+                            <image class="product-image" src='{{item.product_attr_unique?item.productInfo.attrInfo.image:item.productInfo.image}}'></image>
+                            <view class='wrapper flex'>
+                                <view class='item-info flex'>
+                                    <view class="title">
+                                        <view class='twotext font28'>
+                                            <text class="order-tips" wx:if="{{fItem.pink_id}}">拼购</text>
+                                            <text class="order-tips" wx:if="{{fItem.seckill_id}}">秒杀</text>
+                                            <text>{{item.productInfo.store_name}}</text>
+                                        </view>
+                                        <view class='font24' style='margin-top:10rpx;color:#939393'>{{item.productInfo.store_info}}</view>
+                                        <view wx:if="{{item.product_attr_unique}}" class='font24' style='color:#939393'>{{item.productInfo.attrInfo.suk}}</view>
+                                    </view>
+                                    <view>
+                                        <view class="font26 bold">
+                                            <text class="font16">￥</text>{{item.productInfo.price}}</view>
+                                        <view style="text-align:right;margin-top:10rpx;" class="font20 a909090">x{{item.cart_num}}</view>
+                                    </view>
+                                </view>
+                            </view>
+
+                        </view>
+                    </block>
+                    <view class='all-price font24' style='text-align:right'>共{{fItem.total_num}}件商品 合计: ￥{{fItem.total_price}}</view>
+                </navigator>
+                <view class='btn-wrapper flex'>
+                    <navigator hover-class="none" url='/pages/orderDetail/index?type={{nowstatus}}&order_id={{fItem.list_id}}' wx:if="{{fItem.paid == 0}}" class='buypay'>取消订单</navigator>
+                    <navigator hover-class="none" url='/pages/orderDetail/index?type={{nowstatus}}&order_id={{fItem.list_id}}' wx:if="{{fItem.paid == 0}}" class='buypay red-btn'>去支付</navigator>
+                    <navigator hover-class="none" url='/pages/orderDetail/index?type={{nowstatus}}&order_id={{fItem.list_id}}' wx:if="{{fItem.paid == 1&& fItem.status == 0}}" class='buypay'>申请退款</navigator>
+                    <navigator hover-class="none" url='/pages/orderDetail/index?type={{nowstatus}}&order_id={{fItem.list_id}}' wx:if="{{fItem.paid == 1&& fItem.status == 0}}" class='buypay'>查看详情</navigator>
+                    <navigator hover-class="none" url='/pages/orderLogistics/index?orderId={{fItem.list_id}}' wx:if="{{fItem.paid == 1 && fItem.status == 1}}" class='buypay'>查看物流</navigator>
+                    <view bindtap='shouhuo' data-id="{{fItem.list_id}}" wx:if="{{fItem.status == 1}}" class='buypay red-btn'>确认收货</view>
+                    <navigator hover-class="none" url='/pages/orderDetail/index?order_id={{fItem.list_id}}' wx:if="{{fItem.paid == 1 && fItem.status == 2}}" class='buypay'>去评价</navigator>
+                    <!-- <navigator hover-class="none" url='/pages/orderConfirm/index?order_id={{item.list_id}}' wx:if="{{!item.seckill_id && !item.bargain_id && !item.combination_id && nowstatus == 4}}" class='buypay'>再次购买</navigator> -->
+                </view>
+            </view>
+        </block>
+
+    </block>
+    <v-loading-more hidden="{{!moreLoading}}" />
+</view>

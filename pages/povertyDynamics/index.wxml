@@ -1,0 +1,14 @@
+<view class="poverty-dynamics-container">
+    <view class="poverty-dynamics-inner">
+        <block wx:for="{{dynamicsList}}" wx:key>
+          <view class="dynamics-item" bindtap="linkToDetail" data-id="{{item.list_id}}">
+              <view class="item-img">
+                  <image mode="aspectFill" src="{{item.image_input}}"></image>
+              </view>
+              <view class="item-title firsttext bold">{{item.title}}</view>
+              <view class="item-decribe ">{{item.synopsis}}</view>
+              <view class="item-time">发布时间：{{item.add_time}}</view>
+          </view>
+        </block>
+    </view>
+</view>

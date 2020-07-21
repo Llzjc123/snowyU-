@@ -1,0 +1,33 @@
+page {
+    font-size: 32rpx;
+}
+
+.input-section {
+    width: 710rpx;
+    display: flex;
+    margin: 40rpx auto;
+}
+
+.input-section input {
+    border-bottom: 1rpx solid #eee;
+    flex: 1;
+}
+
+.picker {
+    border-bottom: 1rpx solid #eee;
+    padding: 20rpx 0;
+}
+
+.select-section {
+    width: 710rpx;
+    margin: 40rpx auto;
+}
+
+.btn-area, .btn-area button {
+    width: 500rpx;
+    margin: 0 auto;
+    background: #f8614a;
+    color:#fff;
+    border-radius: 20rpx;
+    border:none;
+}

@@ -1,0 +1,18 @@
+<view class="product-container">
+    <view class="aside">
+        <scroll-view class="scroll-wrapper" scroll-y style="height:{{scrollPxHeight}}px;overflow:hidden;">
+            <view class="classify-list" wx:for="{{data}}" wx:key>
+               <view bindtap="selectProductFunc" data-id="{{item.list_id}}" class="firsttext classify-item {{ activeId == item.list_id ? 'active-item' : ''}}">{{item.name}}</view> 
+            </view>
+        </scroll-view>
+    </view>
+    <scroll-view scroll-y style="background: #eeeeee;height:{{scrollPxHeight}}px;overflow:hidden;">
+      <view class="product-display">
+          <view class="block-box">
+              <block wx:for="{{ goodsList }}" wx:key>
+                  <v-product-list data="{{ item }}" class="test-css"></v-product-list>
+              </block>
+          </view>
+      </view>
+    </scroll-view>
+</view>

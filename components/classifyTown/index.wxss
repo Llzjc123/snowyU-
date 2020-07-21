@@ -1,0 +1,38 @@
+.town-container {
+    display: flex;
+}
+
+.town-container .aside-town {
+    width: 120rpx;
+}
+
+.town-container .scroll-wrapper {
+    width: 100%;
+    background: #e5e5e5;
+}
+
+.town-container .town-list {
+    font-size: 22rpx;
+    line-height: 30rpx;
+    text-align: center;
+    padding: 19rpx 0;
+}
+
+.town-container .active-item {
+    background: #fff;
+    color: #f8614a;
+}
+
+.town-scroll {
+    width: 630rpx;
+    background: #eee;
+}
+
+town-display, .block-town {
+    width: 100%;
+}
+
+.town-scroll .block-town {
+    padding: 19rpx 20rpx 0 16rpx;
+    box-sizing: border-box;
+}

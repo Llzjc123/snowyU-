@@ -1,0 +1,47 @@
+@import "../common.wxss";
+
+.product-container {
+    display: flex;
+}
+
+.product-container .aside {
+    width: 120rpx;
+}
+
+.product-container .scroll-wrapper {
+    width: 100%;
+    background: #e5e5e5;
+}
+
+.product-container .classify-list .classify-item {
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 24rpx;
+}
+
+.product-container .classify-list .active-item {
+    background: #fff;
+    color: #f8614a;
+}
+
+.product-container .product-display {
+    width: 100%;
+    /* background: #ebebeb; */
+}
+
+.product-container .block-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20rpx;
+    padding-bottom: 0;
+    box-sizing: border-box;
+}
+
+.product-container .test-css {
+    width: 289rpx;
+    height: 438rpx;
+}

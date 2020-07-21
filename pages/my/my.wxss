@@ -1,0 +1,223 @@
+.my-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ededed;
+}
+
+.my-top {
+    width: 100%;
+    height: 200rpx;
+    display: flex;
+    align-items: center;
+    background-image: url('http://images.jfyf.top/cwj/nfcp/my-bg.png');
+    background-size: 100% 100%;
+}
+
+.my-top .personal-info {
+    display: flex;
+    align-items: center;
+    font-size: 28rpx;
+    color: #fff;
+    font-weight: bold;
+}
+
+.my-top .head-box {
+    width: 116rpx;
+    height: 116rpx;
+    padding: 0 18rpx 0 50rpx;
+}
+
+.my-order {
+    width: 710rpx;
+    background: #fff;
+    border-radius: 6rpx;
+    /* margin: 14rpx auto; */
+    padding: 0 20rpx 20rpx 20rpx;
+    /* box-shadow: 1px 2px 2px 1px #eee; */
+}
+
+.head-box image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.top-position {
+    height: 200rpx;
+    width: 100%;
+}
+
+.scroll-wrapper {
+    width: 100%;
+    background: #ededed;
+}
+
+.scroll-wrapper .my-order {
+    width: 100%;
+    padding: 0 30rpx 24rpx 30rpx;
+    box-sizing: border-box;
+    background: #fff;
+    margin-top: 16rpx;
+}
+
+.my-order .all-order {
+    width: 650rpx;
+    margin: 0 auto;
+    /* padding:0 20rpx; */
+    height: 78rpx;
+    line-height: 78rpx;
+    border-bottom: 1rpx solid #efefef;
+    display: flex;
+    justify-content: space-between;
+}
+
+.all-order .text {
+    font-size: 26rpx;
+    font-weight: bold;
+}
+
+.all-order .text1 {
+    font-size: 22rpx;
+    color: #666;
+}
+
+.list-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-wrapper .item .text {
+    font-size: 24rpx;
+    color: #454545;
+    margin-top: 20rpx;
+}
+
+.list-wrapper .ico {
+    width: 50rpx;
+    height: 50rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-wrapper {
+    height: 150rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.list-wrapper02 {
+    justify-content: flex-start;
+}
+
+.list-wrapper .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    border: none;
+    line-height: 1;
+    border-color: transparent;
+}
+
+.list-wrapper02 .item {
+    margin: 0 42rpx;
+}
+
+.list-wrapper .item::after {
+    display: none;
+    border: none;
+}
+
+.my-service {
+    width: 710rpx;
+    margin: 20rpx auto;
+    background: #fff;
+    border-radius: 6rpx;
+    box-shadow: 1px 2px 2px 1px #eee;
+}
+
+.item-span {
+    min-width: 30rpx;
+    height: 30rpx;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2rpx solid #fe7983;
+    color: #fe7983;
+    line-height: 30rpx;
+    font-size: 24rpx;
+    text-align: center;
+    position: absolute;
+    right: 0rpx;
+    top: 18rpx;
+}
+
+.my-order .latest-logistics {
+    width: 650rpx;
+    margin: 0 auto;
+    height: 142rpx;
+    background: #f6f6f6;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    color: #7d7d7d;
+}
+
+.logistics-top {
+    height: 54rpx;
+    line-height: 54rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logistics-bottom {
+    display: flex;
+}
+
+.logistics-bottom .package {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+}
+
+.my-service {
+    padding-left: 30rpx;
+    background: #fff;
+}
+
+.my-service .service-title {
+    height: 78rpx;
+    line-height: 78rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+    border-bottom: 1px solid #ededed;
+}
+
+.my-service .service-list {
+    height: 110rpx;
+    line-height: 110rpx;
+    border-bottom: 1px solid #ededed;
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-service .service-list:last-child {
+    border-bottom: 0;
+}
+
+.list-left {
+    display: flex;
+}
+
+.list-left .img-view {
+    width: 56rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

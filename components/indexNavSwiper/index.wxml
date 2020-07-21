@@ -1,0 +1,9 @@
+<wxs src="../../utils/filter.wxs" module="util" />
+<view class="index-nav">
+    <block wx:for="{{navOneList}}" wx:key>
+        <view data-item="{{item}}" bindtap="toLink" url="{{util.formatIndexUrl(item.url,item.name)}}" class="nav-view">
+            <image  mode="aspectFill" class="img" src="{{item.pic}}"></image>
+            <text class="text">{{item.name}}</text>
+        </view>
+    </block>
+</view>

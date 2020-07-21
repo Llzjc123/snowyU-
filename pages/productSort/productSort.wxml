@@ -1,0 +1,16 @@
+<view class="activity-container">
+    <view class="occupancy-bg" wx:if="{{activityTitle}}">
+        <view class="bg-color"></view>
+        <!-- <view class="bg-fff"></view>
+        <view class="activity-banner">
+            <image src="../images/activity-banner.png"></image>
+        </view> -->
+    </view>
+    <view class="activity-title" wx:if="{{activityTitle}}">{{activityTitle}}</view>
+    <view class="activity-list" wx:if="{{arr.length>0}}">
+        <block wx:for="{{arr}}" wx:key>
+            <v-normal-product-list data="{{item}}"></v-normal-product-list>
+        </block>
+    </view>
+    <view wx:else class="no-more-data">暂无商品信息</view>
+</view>

@@ -1,0 +1,74 @@
+.recruit-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 22rpx;
+    box-sizing: border-box;
+}
+
+.recruit-wrapper .recruit-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recruit-wrapper .top-left {
+    display: flex;
+}
+
+.recruit-wrapper .img-box {
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.recruit-wrapper .img-box image {
+    width: 100%;
+    height: 100%;
+}
+
+.recruit-wrapper .name {
+    font-size: 30rpx;
+    font-weight: bold;
+    margin-left: 16rpx;
+    line-height: 40rpx;
+    margin-top: 4rpx;
+}
+
+.recruit-wrapper .top-right {
+    color: #646464;
+    font-size: 20rpx;
+    margin-top: 10rpx;
+}
+
+.recruit-wrapper .center-title {
+    height: 90rpx;
+    line-height: 90rpx;
+    margin-top: 16rpx;
+    font-size: 38rpx;
+    font-weight: bold;
+}
+
+.recruit-wrapper .center-describe {
+    color: #4d4d4d;
+    font-size: 22rpx;
+    line-height: 35rpx;
+}
+
+.recruit-wrapper .recruit-bottom {
+    color: #4d4d4d;
+    margin-top: 20rpx;
+    line-height: 42rpx;
+}
+
+.recruit-wrapper .address {
+    font-size: 22rpx;
+    margin-left: 18rpx;
+}
+
+.recruit-wrapper .tel {
+    font-size: 18rpx;
+    margin-left: 18rpx;
+}
+
+.recruit-wrapper .tips {
+    font-size: 20rpx;
+    margin-top: 20rpx;
+}

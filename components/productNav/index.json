@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "v-product":"/components/product01/index"
+    }
+}

@@ -1,0 +1,5 @@
+<scroll-view style='height:{{scrollPxHeight}}px' scroll-y class="enterprise-container">
+    <view wx:for="{{ data }}" wx:key>
+        <v-shop data="{{ item }}"></v-shop>
+    </view>
+</scroll-view>

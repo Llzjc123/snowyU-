@@ -1,0 +1,9 @@
+<view class="poverty-purchase-container">
+    <view class="poverty-purchase-inner">
+        <block wx:for="{{purchaseList}}" wx:key wx:if="{{purchaseList.length > 0}}">
+            <navigator class="purchase-item" url="/pages/povertyActivity/index?id={{item.list_id}}" hover-class="none">
+                <v-purchase data="{{item}}"></v-purchase>
+            </navigator>
+        </block>
+    </view>
+</view>

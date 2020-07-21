@@ -1,0 +1,8 @@
+<view class="business-center-container">
+    <navigator url="/pages/my/orderManage/index">
+        <view class="center-list">
+            <view class="center-left font30">订单管理</view>
+            <image src="../../images/arrow-right2.png" style="width:12rpx;height:18rpx;margin-right:20rpx;"></image>
+        </view>
+    </navigator>
+</view>

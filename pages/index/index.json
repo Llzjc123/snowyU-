@@ -1,0 +1,13 @@
+{
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance":100,
+    "usingComponents": {
+        "v-search": "/components/searchBox/index",
+        "v-nav-swiper": "/components/indexNavSwiper/index",
+        "v-news": "/components/indexNews/index",
+        "v-like-product-list": "/components/product03/index",
+        "v-loading": "/components/loading/index",
+        "v-loading-more": "/components/moredLoading/index"
+    }
+}

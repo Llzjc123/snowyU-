@@ -1,0 +1,40 @@
+<view class="order-inner">
+    <view class="order-top">
+        <view class="top-left">
+            <view>
+                <image src="{{data.store_imgUrl}}" style="width:60rpx;height:60rpx;border-radius:6rpx;"></image>
+            </view>
+            <text class="order-name font24 bold">{{data.shop_name}}</text>
+        </view>
+        <view class="order-status font24">{{data.status}}</view>
+    </view>
+    <view class="order-center">
+        <view class="center-img">
+            <image src="{{data.image}}" style="border-radius:6rpx;width:166rpx;height:166rpx;"></image>
+        </view>
+        <view class="center-detail">
+            <view class="detail-top">
+                <view class="info-box">
+                    <view class="info-name font22 bold {{type === 'bill' ? 'widthBig' : ''}}">{{data.store_name}}</view>
+                    <!-- <view wx:if="{{type === 'order'}}" class="weight font20">320克</view> -->
+                </view>
+                <view class="number-box" wx:if="{{type === 'order'}}">
+                    <view class="price font26 bold">
+                        <text class="font16">￥</text>{{data.p_price}}</view>
+                    <view class="number font18">x{{data.total_num}}</view>
+                </view>
+            </view>
+            <view class="detail-bottom">
+                <view class="font22">佣金: ￥ {{data.money}}</view>
+                <view wx:if="{{type === 'order'}}">
+                    <view wx:if="{{status === 2}}" class="detail-btn font22">佣金已到账</view>
+                    <view wx:else class="detail-btn font22" style="background:#fff;border: 1rpx solid #cdcdcd;color:#666;">佣金处理中</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="order-bottom font22">
+        <view>成交时间：{{data.add_time}}</view>
+        <view>订单号：{{data.order_id}}</view>
+    </view>
+</view>

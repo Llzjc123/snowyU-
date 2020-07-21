@@ -1,0 +1,40 @@
+@import "../common.wxss";
+.search-container {
+    width: 100%;
+    height:110rpx;
+    background: #f8614a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container .input-box {
+    flex:1;
+    height: 60rpx;
+    background: #fff;
+    color: #a1a1a1;
+    font-size: 28rpx;
+    border-radius: 32rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 30rpx;
+    margin: 0 30rpx;
+}
+
+.search-container .input-box image {
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 12rpx;
+}
+
+.search-container .input-box .fire-ico {
+    width: 16rpx;
+    height: 26rpx;
+}
+
+.search-container .input-box text {
+    flex: 1;
+}

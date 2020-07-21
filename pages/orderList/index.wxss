@@ -1,0 +1,137 @@
+page {
+    font-size: 28rpx;
+    background-color: #eee;
+    color: #333;
+}
+
+.menu {
+    background-color: #f1f1f1;
+    padding-left: 10rpx;
+}
+
+.menu .item {
+    margin: 0 34rpx;
+    height: 85rpx;
+    line-height: 85rpx;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.menu .item.on {
+    color: #ff2f3e;
+    border-bottom: 4rpx solid #ff2f3e;
+}
+
+.orders-list .items {
+    width: 710rpx;
+    margin: 20rpx auto 0;
+    background-color: #fff;
+    border-radius: 8rpx;
+}
+
+.del {
+    font-size: 40rpx !important;
+    color: #ccc !important;
+}
+
+.pay-status {
+    height: 70rpx;
+    padding: 0 30rpx;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pay-status .status-txt {
+    font-size: 24rpx;
+    color: #f97662;
+}
+
+.pay-status .arrow-right {
+    color: #808080;
+    position: relative;
+    top: -4rpx;
+}
+
+.info-list {
+    padding: 0 20rpx 0 20rpx;
+}
+
+.info-list .pro-item {
+    padding-top: 10rpx;
+}
+
+.info-list .pro-item .product-image {
+    width: 166rpx;
+    height: 166rpx;
+    border-radius: 8rpx;
+}
+
+.info-list .pro-item .wrapper {
+    flex: 1;
+    margin-left: 20rpx;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-list .pro-item .wrapper .all-price {
+    font-size: 24rpx;
+    color: #333;
+    text-align: right;
+}
+
+.info-list .pro-item .item-info {
+    width: 474rpx;
+    justify-content: space-around;
+}
+
+.info-list .pro-item .item-info .title {
+    width: 356rpx;
+}
+
+.info-list .pro-item .item-info .title .order-tips {
+    padding: 0 4rpx;
+    border: 2rpx solid #ff2f3e;
+    color: #ff2f3e;
+    font-size: 20rpx;
+    text-align: center;
+    border-radius: 4rpx;
+    margin-right: 12rpx;
+}
+
+.btn-wrapper {
+    justify-content: flex-end;
+    padding: 20rpx;
+}
+
+.btn-wrapper .buypay {
+    width: 136rpx;
+    height: 46rpx;
+    line-height: 46rpx;
+    text-align: center;
+    background-color: #fff;
+    color: #595959;
+    display: block;
+    border-radius: 30rpx;
+    font-size: 24rpx;
+    border: 1rpx solid #dcdcdc;
+    margin-left: 16rpx;
+}
+
+.btn-wrapper .red-btn {
+    color: #f8614a;
+    border-color: #f8614a;
+}
+
+.state-ytk {
+    color: #333 !important;
+}
+
+.youfei {
+    font-size: 22rpx;
+}
+
+.kuang {
+    border: 1rpx solid #999 !important;
+    background-color: #fff !important;
+    color: #999 !important;
+}

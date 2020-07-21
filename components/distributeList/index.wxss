@@ -1,0 +1,101 @@
+@import "../common.wxss";
+
+.order-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.order-top {
+    height: 98rpx;
+    padding: 0 22rpx;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-top .top-left {
+    display: flex;
+    align-items: center;
+}
+
+.order-top .order-name {
+    margin-left: 16rpx;
+}
+
+.order-top .order-status {
+    color: #f8614a;
+}
+
+.order-center {
+    padding: 0 22rpx;
+    box-sizing: border-box;
+    height: 278rpx;
+    border-bottom: 1rpx solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.order-center .center-detail {
+    margin-left: 22rpx;
+    width: 452rpx;
+}
+
+.order-center .detail-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-center .info-name {
+    width: 330rpx;
+    line-height: 32rpx;
+}
+
+.order-center  .widthBig {
+    width: 430rpx;
+}
+
+.order-center .weight {
+    line-height: 40rpx;
+    color: #808080;
+}
+
+.order-center .detail-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f8614a;
+    margin-top: 54rpx;
+}
+
+.order-center .number-box {
+    position: relative;
+}
+
+.order-center .price, .order-center .number {
+    position: absolute;
+    right: 0;
+}
+
+.order-center .number {
+    top: 40rpx;
+}
+
+.order-center .detail-btn {
+    width: 153rpx;
+    height: 55rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 55rpx;
+    background: #f8614a;
+    border-radius: 28rpx;
+}
+
+.order-bottom {
+    margin-top: 22rpx;
+    line-height: 40rpx;
+    color: #666;
+    padding: 0 28rpx;
+    box-sizing: border-box;
+}

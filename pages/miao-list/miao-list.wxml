@@ -1,0 +1,26 @@
+<view class="activity-container" wx:if="{{loading}}">
+    <view class="occupancy-bg">
+        <view class="bg-color"></view>
+        <view class="bg-fff"></view>
+        <view class="activity-banner">
+            <image mode="aspectFill" src="{{bannerImg}}"></image>
+        </view>
+    </view>
+    <block wx:if="{{productList.length>0}}">
+        <view class="title-view">
+            <view class="title">
+                <view style='z-index:999'>秒杀中</view>
+                <view class="line"></view>
+            </view>
+        </view>
+        <view class="activity-list">
+            <block wx:for="{{productList}}" wx:key>
+                <v-product-group-buy type="time" data="{{item}}"></v-product-group-buy>
+            </block>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="no-more-data">暂无秒杀产品</view>
+    </block>
+</view>
+<v-loading wx:else />

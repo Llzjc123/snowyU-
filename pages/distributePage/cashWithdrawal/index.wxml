@@ -1,0 +1,34 @@
+<form bindsubmit="formSubmit">
+    <view class="cash-withdrawal-container">
+        <view class="cash-withdrawal-inner">
+            <view class="cash-box">
+                <view class="box-top">
+                    <view class="font26">可提现金额</view>
+                    <view class="font44 bold">
+                        <text class="font20">￥</text>{{now_money}}</view>
+                </view>
+                <view class="box-bottom">
+                    <view class="cash-to-wechat">
+                        <text class="font26 bold">提现至</text>
+                        <view class="wechat-icon">
+                            <image src="../../images/wechat-icon.png" style="width:39rpx;height:39rpx;"></image>
+                        </view>
+                        <text class="font26 bold">微信钱包</text>
+                    </view>
+                    <view class="font26 bold">提现金额</view>
+                    <view class="input-wrapper">
+                        <view style="font-size:60rpx;">￥</view>
+                        <input placeholder='最高可提现{{now_money}}元' placeholder-class='placeholder'  name="money" value='{{money}}'></input>
+                        <view class="aff2 font28" bindtap='allInput'>全部</view>
+                    </view>
+                    <view class="input-view">
+                        <view class="font28">真实姓名</view>
+                        <input name="username"></input>
+                    </view>
+                    <view class="tips font22">温馨提示：最低提现金额，提现日期，到账日期，微信 红包发送。</view>
+                </view>
+            </view>
+        </view>
+        <button class="submit-btn font30" formType="submit">提交申请</button>
+    </view>
+</form>

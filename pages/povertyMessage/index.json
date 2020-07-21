@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "便民信息",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "v-purchase": "/components/povertyRecruit/index"
+    }
+}

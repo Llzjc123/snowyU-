@@ -1,0 +1,24 @@
+page {
+  background: #eeeeee;
+}
+
+.collection-wrapper {
+    margin-top: 16rpx;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.collection-wrapper .collection-product-list {
+    width: 710rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.collection-wrapper .collection-product-list .collection-item {
+    height: 562rpx;
+}
+
+.collection-wrapper .collection-product-list .collection-item:nth-child(2n-1) {
+    margin-right: 17rpx;
+}

@@ -1,0 +1,15 @@
+<navigator hover-class='none' url="/pages/productDetail/index?productId={{data.list_id}}">
+    <view class="allproduct-list" style="margin-bottom: 16rpx;">
+        <view class="allproduct-img">
+            <image mode="aspectFill" src="{{data.img_url}}"></image>
+        </view>
+        <view>
+            <view class="name font24 a333 bold firsttext">{{data.store_name}}</view>
+        </view>
+        <view class="price">
+            <text class="font20 aff2">￥</text>
+            <text class="din-bold font36 aff2">{{data.price}}</text>
+        </view>
+        <image src="../images/cart.png" class="cart-ico"></image>
+    </view>
+</navigator>
